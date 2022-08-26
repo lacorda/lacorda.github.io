@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[225],{5930:t=>{t.exports=JSON.parse('{"label":"Getting started","permalink":"/blog/tags/getting-started","allTagsPath":"/blog/tags","count":1}')}}]);
