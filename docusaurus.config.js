@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Rabbit Online',
-  tagline: 'Lacorda\'s website',
+  title: 'Lacorda',
+  tagline: '个人主页',
   url: 'https://lacorda.github.io/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -90,7 +90,8 @@ const config = {
       // },
 
       navbar: {
-        title: 'RABBIT ONLINE',
+        title: 'LACORDA',
+        hideOnScroll: true, // 滚动时隐藏导航栏
         logo: {
           alt: 'Rabbit Online, frontend',
           src: 'img/logo.png',
@@ -109,14 +110,15 @@ const config = {
             label: '面经',
           },
           {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
+            href: 'https://github.com/lacorda',
             position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
           },
-          {
-            type: 'search',
-            position: 'right',
-          },
+          // {
+          //   type: 'search',
+          //   position: 'right',
+          // },
         ],
       },
       // 页脚
@@ -193,6 +195,17 @@ const config = {
         disableSwitch: false, // 隐藏颜色模式开关
         respectPrefersColorScheme: false, // 使用系统自带模式，而不使用defaultMode
       },
+      // algolia: {
+      //   // The application ID provided by Algolia
+      //   appId: 'BWG0DEIDEP',
+
+      //   // Public API key: it is safe to commit it
+      //   apiKey: 'd3f9fff64e1510e7299229fb32996203',
+
+      //   indexName: 'messiahhh',
+
+      //   contextualSearch: true,
+      // }
     }),
 };
 
