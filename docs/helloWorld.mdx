@@ -1,0 +1,459 @@
+---
+id: helloWorld
+title: A doc with tags
+slug: /test
+tags:
+  - Demo
+  - Getting started
+---
+
+# 标题
+
+您准备好为您的开源项目创建文档站点了吗？
+
+## 右侧-1级标题
+
+标题将显示在右上方的目录中
+
+以便用户无需向下滚动，甚至无需阅读更多内容，便可了解此页的梗概。
+
+## 列表
+
+- lists will help you
+- present the key points
+- that you want your users to remember
+  - and you may nest them
+    - multiple times
+
+## 自定义id {#custom-id}
+
+`{#custom-id}` 
+
+### 右侧-2级标题
+
+加粗： **bold**  [链接](/)
+
+图片：
+![img alt](/img/docusaurus.png)
+
+引言：
+> Easy to maintain open source documentation websites.
+>
+> — Docusaurus
+
+
+
+## details 元素: 展开/收起块
+
+<details>
+  <summary>Toggle me!</summary>
+  <div>
+    <div>This is the detailed content</div>
+    <br/>
+    <details>
+      <summary>
+        Nested toggle! Some surprise inside...
+      </summary>
+      <div>
+        😲😲😲😲😲
+      </div>
+    </details>
+  </div>
+</details>
+
+##  MDX组件
+
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '2px',
+      color: '#fff',
+      padding: '0.2rem',
+    }}>
+    {children}
+  </span>
+);
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+
+I can write **Markdown** alongside my _JSX_!
+
+
+### 导入第三方组件中定义的自己的组件
+
+<Highlight color="#25c2a0">Docusaurus green</Highlight>
+
+
+### 组件作用域
+
+- src/theme/MDXComponents.js 中引入
+
+- src/pages/index.js 入口文件中使用 `<MDXContent></MDXContent>`包裹作用的范围外
+
+
+### 在 MDX 页面中，以下变量可以作为全局变量使用:
+
+- frontMatter: 字符串键和值的记录;
+- toc: 目录，如标题树。参见 [Inline TOC](https://www.docusaurus.cn/docs/markdown-features/toc#inline-table-of-contents)
+- contentTitle: markdown的标题，这是第一个 h1 标题，如果没有则为undefined
+
+import TOCInline from '@theme/TOCInline';
+// import CodeBlock from '@theme/CodeBlock';
+
+目录树：
+
+<CodeBlock className="language-json">{JSON.stringify(toc, null, 2)}</CodeBlock>
+
+头部front matter配置：
+
+<ul>
+  {Object.entries(frontMatter).map(([key, value]) => <li key={key}><b>{key}</b>: {value}</li>)}
+</ul>
+
+<p>标题： <b>{contentTitle}</b></p>
+
+
+### 标签组
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+  <TabItem value="apple" label="Apple" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+
+#### defaultValue - 4个#右侧导航栏不显示
+
+<Tabs
+  defaultValue="banana"
+  values={[
+    {label: 'Apple', value: 'apple'},
+    {label: 'Orange', value: 'orange'},
+    {label: 'Banana', value: 'banana'},
+  ]}>
+  <TabItem value="apple">This is an apple 🍎</TabItem>
+  <TabItem value="orange">This is an orange 🍊</TabItem>
+  <TabItem value="banana">This is a banana 🍌</TabItem>
+</Tabs>
+
+#### groupId 相同时，同步选中的标签卡
+import styles from './styles.module.css';
+
+<Tabs>
+  <TabItem value="apple" label="Apple" attributes={{className: styles.red}}>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange" attributes={{className: styles.orange}}>
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana" attributes={{className: styles.yellow}}>
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows">Use Ctrl + C to copy.</TabItem>
+  <TabItem value="mac" label="macOS">Use Command + C to copy.</TabItem>
+</Tabs>
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows">Use Ctrl + V to paste.</TabItem>
+  <TabItem value="mac" label="macOS">Use Command + V to paste.</TabItem>
+</Tabs>
+
+#### className 自定义样式
+
+<Tabs className="unique-tabs">
+  <TabItem value="Apple">This is an apple 🍎</TabItem>
+  <TabItem value="Orange">This is an orange 🍊</TabItem>
+  <TabItem value="Banana">This is a banana 🍌</TabItem>
+</Tabs>
+
+### 多格式的代码Tab
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
+function helloWorld() {
+  console.log('Hello, world!');
+}
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+def hello_world():
+  print("Hello, world!")
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+class HelloWorld {
+  public static void main(String args[]) {
+    // ...
+  }
+}
+```
+</TabItem>
+</Tabs>
+
+
+### npm/ yarn 指令使用，只写一个npm
+
+```bash
+npm i @docusaurus/remark-plugin-npm2yarn
+```
+
+```
+module.exports = {
+  // ...
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          remarkPlugins: [
+            [require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],
+          ],
+        },
+        pages: {
+          remarkPlugins: [require('@docusaurus/remark-plugin-npm2yarn')],
+        },
+        blog: {
+          // ...
+        },
+      },
+    ],
+  ],
+};
+```
+
+```bash npm2yarn
+npm install @docusaurus/remark-plugin-npm2yarn
+```
+
+## 引入文件代码 raw-loader
+
+```js
+npm install --save raw-loader
+```
+
+import CodeBlock from '@theme/CodeBlock';
+import MyComponentSource from '!!raw-loader!./myComponent';
+
+<CodeBlock language="jsx">{MyComponentSource}</CodeBlock>
+
+
+
+## 引入代码段
+
+```jsx title="/src/components/HelloCodeTitle.js"
+function HelloCodeTitle(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+```js
+console.log('Every repo must come with a mascot.');
+```
+
+### 代码高亮 - prism
+
+```
+prism: {
+  theme: lightCodeTheme,
+  darkTheme: darkCodeTheme,
+  //
+  // 语法高亮主题，默认使用 Prism 的 Palenight
+  // theme: require('prism-react-renderer/themes/vsLight'),
+  // darkTheme: require('prism-react-renderer/themes/vsDark'),
+  defaultLanguage: 'javascript',
+},
+```
+
+### 代码行高亮
+- highlight-next-line
+- highlight-start / highlight-end
+- 元字符串中指定突出显示的行范围，如：{1,4-6,11}
+
+```js
+function HighlightSomeText(highlight) {
+  if (highlight) {
+    // highlight-next-line
+    return 'This text is highlighted!';
+  }
+
+  return 'Nothing highlighted';
+}
+
+function HighlightMoreText(highlight) {
+  // highlight-start
+  if (highlight) {
+    return 'This range is highlighted!';
+  }
+  // highlight-end
+
+  return 'Nothing highlighted';
+}
+```
+
+```jsx {1,4-6,11}
+import React from 'react';
+
+function MyComponent(props) {
+  if (props.isBar) {
+    return <div>Bar</div>;
+  }
+
+  return <div>Foo</div>;
+}
+
+export default MyComponent;
+```
+
+### 注释系统  magicComments
+
+In JavaScript, trying to access properties on `null` will error.
+
+```js
+const name = null;
+// This will error
+console.log(name.toUpperCase());
+// Uncaught TypeError: Cannot read properties of null (reading 'toUpperCase')
+```
+
+### 显示行号  showLineNumbers
+```jsx {1,4-6,11} showLineNumbers
+import React from 'react';
+
+function MyComponent(props) {
+  if (props.isBar) {
+    return <div>Bar</div>;
+  }
+
+  return <div>Foo</div>;
+}
+
+export default MyComponent;
+```
+
+## 交互式代码编辑器
+
+### 安装
+
+```bash
+npm install --save @docusaurus/theme-live-codeblock
+```
+
+### 配置
+```js title="docusaurus.config.js"
+module.exports = {
+  // ...
+  themes: ['@docusaurus/theme-live-codeblock'],
+  // ...
+};
+```
+
+### 应用
+在代码段后面添加 live 字段，就可以编辑代码了， `return` 可以实时输出结果
+```jsx live
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+```
+
+## 执行输入的代码，使用pre/code/CodeBlock标签
+<pre>
+  <b>Input: </b>1 2 3 4{'\n'}
+  <b>Output: </b>"366300745"{'\n'}
+</pre>
+<code>
+  <b>Input: </b>1 2 3 4{'\n'}
+  <b>Output: </b>"366300745"{'\n'}
+</code>
+<CodeBlock>
+  <b>Input: </b>1 2 3 4{'\n'}
+  <b>Output: </b>"366300745"{'\n'}
+</CodeBlock>
+
+
+## 告示框 note
+
+:::note 自定义标题
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::info
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::caution
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::danger
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
+
+:::tip Use tabs in admonitions
+
+<Tabs>
+  <TabItem value="apple" label="Apple">This is an apple 🍎</TabItem>
+  <TabItem value="orange" label="Orange">This is an orange 🍊</TabItem>
+  <TabItem value="banana" label="Banana">This is a banana 🍌</TabItem>
+</Tabs>
+
+:::
+
+#### 组件写法
+import Admonition from '@theme/Admonition';
+
+<Admonition type="tip" icon="💡" title="Did you know...">
+  <p>
+    Use plugins to introduce shorter syntax for the most commonly used JSX
+    elements in your project.
+  </p>
+</Admonition>

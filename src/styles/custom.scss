@@ -28,3 +28,52 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+.navbar__logo {
+  height: 2.8rem;
+}
+
+.footer .container {
+  position: relative;
+  display: flex;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 156px;
+    height: 156px;
+    background: url('@site/static/img/logo.png') no-repeat;
+    background-size: contain;
+  }
+
+  .footer__links {
+    flex: 1;
+    margin-left: 32px;
+  }
+
+  .footer__bottom {
+    position: absolute;
+    width: 100%;
+    bottom: -24px;
+  }
+}
+
+
+// 注释特殊样式
+.code-block-error-line {
+  background-color: #ff000020;
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  border-left: 3px solid #ff000080;
+}
+
+// 黑暗模式
+[data-theme='dark'] {}
+
+// 手机视图
+@media screen and (max-width: 996px) {}
+
+@import './font-awesome.min.css';
+@import './media.scss';
+@import './home.scss';

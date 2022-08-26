@@ -1,0 +1,104 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+.heroBanner {
+  padding: 2.4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(135deg, #1abc9c 0%, #8e44ad 100%);
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.hero__avatar {
+  // width: 150px;
+  // height: 150px;
+  width: 8.4rem;
+  height: 8.4rem;
+  box-sizing: border-box;
+  border: 0.3rem white solid;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0.3rem 0.85rem 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  -webkit-animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.hero__content {
+  width: 100%;
+  max-width: 23rem;
+  padding: 1rem 2.5rem;
+  box-sizing: border-box;
+  text-align: center;
+
+  h1 {
+    font-size: 1.5rem;
+    margin: 0.6rem 0 0 0;
+    text-transform: uppercase;
+    color: #eeeeee;
+    font-weight: normal;
+  }
+
+  p {
+    font-size: 0.72rem;
+    font-weight: light;
+    color: #333333;
+    margin: 0;
+  }
+
+  span a {
+    font-size: 1.125rem;
+    color: #cccccc;
+    text-decoration: none;
+    margin: 0 0.625rem;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 0.3rem 0.85rem 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+
+  50% {
+    box-shadow: 0 1.5rem 0.85rem 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+
+  100% {
+    box-shadow: 0 0.3rem 0.85rem 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 1.6rem;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

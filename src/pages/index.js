@@ -1,41 +1,49 @@
 import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
+// import Wow from 'wow.js'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import MDXContent from '@theme/MDXContent';
 
-import styles from './index.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
+    <header className="hero hero--primary heroBanner">
+      <MDXContent>
+        <div className="container">
+          <div class="hero__avatar">
+            <img src={useBaseUrl('/img/logo.png')} alt="rabbit online" />
+          </div>
+          <div class="hero__content">
+            <h1>没有伞的孩子必须努力奔跑</h1>
+            <p>Follow me on:</p>
+            <p>
+              {/* <span><a href="https://twitter.com/MDesignsuk" target="_blank"><i class="fa fa-twitter"></i></a></span> */}
+              <span><a href="https://github.com/Lacorda/" target="_blank"><i class="fa fa-github"></i></a></span>
+              {/* <span><a href="https://bitbucket.org/Mario_Duarte/" target="_blank"><i class="fa fa-bitbucket"></i></a></span>
+              <span><a href="https://codepen.io/MarioDesigns/" target="_blank"><i class="fa fa-codepen"></i></a></span> */}
+            </p>
+            <p>BY: {siteConfig.organizationName}</p>
+          </div>
         </div>
-      </div>
+      </MDXContent>
     </header>
   );
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const data = useDocusaurusContext();
+  const { siteConfig } = data;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.tagline}`}
+      description="个人站">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        {/* <HomepageList /> */}
       </main>
     </Layout>
   );
 }
+
