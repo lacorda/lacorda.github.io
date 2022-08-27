@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[713],{3457:e=>{e.exports=JSON.parse('[{"label":"Demo","permalink":"/blog/tags/demo","count":1},{"label":"Getting started","permalink":"/blog/tags/getting-started","count":1}]')}}]);
