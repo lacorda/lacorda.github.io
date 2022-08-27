@@ -33,30 +33,30 @@
   height: 2.8rem;
 }
 
-.footer .container {
-  position: relative;
-  display: flex;
+// .footer .container {
+//   position: relative;
+//   display: flex;
 
-  &:before {
-    content: "";
-    display: block;
-    width: 156px;
-    height: 156px;
-    background: url('@site/static/img/logo.png') no-repeat;
-    background-size: contain;
-  }
+//   &:before {
+//     content: "";
+//     display: block;
+//     width: 156px;
+//     height: 156px;
+//     background: url('@site/static/img/logo.png') no-repeat;
+//     background-size: contain;
+//   }
 
-  .footer__links {
-    flex: 1;
-    margin-left: 32px;
-  }
+//   .footer__links {
+//     flex: 1;
+//     margin-left: 32px;
+//   }
 
-  .footer__bottom {
-    position: absolute;
-    width: 100%;
-    bottom: -24px;
-  }
-}
+//   .footer__bottom {
+//     position: absolute;
+//     width: 100%;
+//     bottom: -24px;
+//   }
+// }
 
 
 // 注释特殊样式

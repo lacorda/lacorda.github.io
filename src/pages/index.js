@@ -12,17 +12,15 @@ function HomepageHeader() {
     <header className="hero hero--primary heroBanner">
       <MDXContent>
         <div className="container">
-          <div class="hero__avatar">
+          <div className="hero__avatar">
             <img src={useBaseUrl('/img/logo.png')} alt="rabbit online" />
           </div>
-          <div class="hero__content">
-            <h1>没有伞的孩子必须努力奔跑</h1>
+          <div className="hero__content">
+            <h1>Hi~ 欢迎来到我的小屋</h1>
+            <h3>记录学习、留住生活，让时间过得慢一点</h3>
             <p>Follow me on:</p>
             <p>
-              {/* <span><a href="https://twitter.com/MDesignsuk" target="_blank"><i class="fa fa-twitter"></i></a></span> */}
-              <span><a href="https://github.com/lacorda/" target="_blank"><i class="fa fa-github"></i></a></span>
-              {/* <span><a href="https://bitbucket.org/Mario_Duarte/" target="_blank"><i class="fa fa-bitbucket"></i></a></span>
-              <span><a href="https://codepen.io/MarioDesigns/" target="_blank"><i class="fa fa-codepen"></i></a></span> */}
+              <span><a href="https://github.com/lacorda/" target="_blank"><i className="fa fa-github"></i></a></span>
             </p>
             <p>BY: {siteConfig.organizationName}</p>
           </div>
