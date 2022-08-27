@@ -110,15 +110,15 @@ const config = {
             label: '面经',
           },
           {
+            type: 'search',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/lacorda',
             position: 'right',
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
           },
-          // {
-          //   type: 'search',
-          //   position: 'right',
-          // },
         ],
       },
       // 页脚
@@ -195,17 +195,17 @@ const config = {
         disableSwitch: false, // 隐藏颜色模式开关
         respectPrefersColorScheme: false, // 使用系统自带模式，而不使用defaultMode
       },
-      // algolia: {
-      //   // The application ID provided by Algolia
-      //   appId: 'BWG0DEIDEP',
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'QUY2MQ2NGM',
 
-      //   // Public API key: it is safe to commit it
-      //   apiKey: 'd3f9fff64e1510e7299229fb32996203',
+        // Public API key: it is safe to commit it
+        apiKey: '81f006887e1fd026f7360336eeceb378',
 
-      //   indexName: 'messiahhh',
+        indexName: 'lacorda',
 
-      //   contextualSearch: true,
-      // }
+        contextualSearch: true,
+      }
     }),
 };
 
