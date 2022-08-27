@@ -172,6 +172,15 @@ number
 </ul>
 </details>
 
+```
+function foo(){ 
+  // Array.prototype.slice.call(arguments)
+  // Array.prototype.splice.call(arguments, 0);
+  // Array.prototype.concat.apply([], arguments);
+// Array.from(arguments) 
+}
+```
+
 
 ## 9.为什么0.1+0.2 ! == 0.3，如何让其相等现？浮点型精度问题的处理
 <details>
@@ -181,8 +190,14 @@ number
 </ul>
 </details>
 
+```
+// Number.EPSILON属性判断两个值是否相等
+function numberepsilon(arg1,arg2){                   
+  return Math.abs(arg1 - arg2) < Number.EPSILON;     
+}  
+```
 
-
+![浮点型计算](@site/static/docs/01.Javascript篇/浮点型计算.png)
 
 
 
