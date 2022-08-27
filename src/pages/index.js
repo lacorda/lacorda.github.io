@@ -36,6 +36,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.tagline}`}
+      wrapperClassName="lacorda-homepage"
       description="个人站">
       <HomepageHeader />
       <main>
