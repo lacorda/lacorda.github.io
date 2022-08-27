@@ -1,6 +1,5 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
-
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
@@ -26,7 +25,18 @@ const config = {
   },
 
   // 插件
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-content-docs', // 多docs
+      {
+        id: 'topic',
+        path: 'topic',
+        routeBasePath: 'topic',
+        sidebarPath: require.resolve('./sidebars/topic.js'),
+      },
+    ],
+  ],
 
   // 插件 - 主题: 实时代码编辑
   themes: ['@docusaurus/theme-live-codeblock'],
@@ -38,7 +48,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve('./sidebars/docs.js'),
           // EditUrlFunction
           // editUrl: ({ version, versionDocsDirPath, docPath, permalink, locale }) => {
           //   console.log('editUrl======', version, versionDocsDirPath, docPath, permalink, locale)
@@ -56,11 +66,10 @@ const config = {
           ],
         },
         blog: {
-          showReadingTime: true,
-          blogSidebarTitle: 'Blog',  // blog侧边栏总标题
+          showReadingTime: false,
+          blogSidebarTitle: '记录',  // blog侧边栏总标题
           blogSidebarCount: 'ALL', // 所有博文
-          editUrl:
-            'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
+          editUrl: 'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
         },
         theme: {
           customCss: require.resolve('./src/styles/custom.scss'),
@@ -99,15 +108,21 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'helloWorld',
+            docId: 'Javascript篇/数据类型',
             position: 'left',
             label: '大前端',
           },
           {
-            to: '/blog',
-            docId: '/blog/helloWorld',
+            type: 'doc',
+            docsPluginId: 'topic',
+            docId: 'Javascript篇/数据类型',
             position: 'left',
-            label: '面经',
+            label: '面试题',
+          },
+          {
+            to: 'blog',
+            position: 'left',
+            label: '记录',
           },
           {
             type: 'search',
@@ -119,7 +134,7 @@ const config = {
             className: 'header-github-link',
             'aria-label': 'GitHub repository',
           },
-        ],
+        ]
       },
       // 页脚
       footer: {

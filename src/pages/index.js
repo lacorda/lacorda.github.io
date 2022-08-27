@@ -20,7 +20,7 @@ function HomepageHeader() {
             <p>Follow me on:</p>
             <p>
               {/* <span><a href="https://twitter.com/MDesignsuk" target="_blank"><i class="fa fa-twitter"></i></a></span> */}
-              <span><a href="https://github.com/Lacorda/" target="_blank"><i class="fa fa-github"></i></a></span>
+              <span><a href="https://github.com/lacorda/" target="_blank"><i class="fa fa-github"></i></a></span>
               {/* <span><a href="https://bitbucket.org/Mario_Duarte/" target="_blank"><i class="fa fa-bitbucket"></i></a></span>
               <span><a href="https://codepen.io/MarioDesigns/" target="_blank"><i class="fa fa-codepen"></i></a></span> */}
             </p>

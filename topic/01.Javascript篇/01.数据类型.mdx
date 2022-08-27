@@ -1,0 +1,203 @@
+---
+title: 数据类型
+slug: /数据类型
+authors: lacorda
+tags: [数据类型]
+description: js的数据类型有哪些？存储上有何区别？
+---
+
+## 1.数据类型有哪些？有什么差别？
+
+<details>
+<summary>8种数据类型</summary>
+<ul>
+<li>7种原始类型：<Highlight>Undefined</Highlight>、<Highlight>Null</Highlight>、<Highlight>Boolean</Highlight>、<Highlight>String</Highlight>、<Highlight>Number</Highlight>、<Highlight>Symbol</Highlight>（ES6）、<Highlight>BigInt</Highlight>（ES6）</li>
+<li>1种引用类型：<Highlight>Object</Highlight></li>
+</ul>
+</details>
+<details>
+<summary>原始类型和引用类型的区别</summary>
+<ul>
+<li>原始类型：值直接存储在栈中</li>
+<li>引用类型：在栈中存储指向地址的指针，引用值存储在堆中，解释器通过指针地址，找到在栈中的值</li>
+</ul>
+</details>
+
+
+## 2.Null和undefined有什么区别？
+<details>
+  <summary>查看答案</summary>
+  <div>
+  <table>
+    <tr>
+      <th></th>
+      <th>定义</th>
+      <th>转数值类型</th>
+    </tr>
+    <tr>
+      <td>null</td>
+      <td>空对象</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>undefined</td>
+      <td>未赋值的变量，对象未赋值的属性，函数没有返回值</td>
+      <td>NaN</td>
+    </tr>
+  </table>
+  </div>
+</details>
+
+## 3.数据类型检测方法有哪些？
+<details>
+<summary>typeof  null、对象、数组都是object，无法使用typeof判断</summary>
+<pre>typeof undefined // undefined</pre>
+<pre>typeof null      // object</pre>
+<pre>typeof true      // boolean</pre>
+<pre>typeof ‘str’       // string</pre>
+<pre>typeof 1         // number</pre>
+<pre>typeof Symbol(1) // symbol</pre>
+<pre>typeof 1n        // bigint</pre>
+<pre>typeof []        // object</pre>
+<pre>typeof {}        // object</pre>
+<pre>typeof function() {} // function</pre>
+</details>
+
+<details>
+  <summary>A instanceof B：B是否在A的原型链上，只能判断引用数据类型（对象，数组，函数）</summary>
+  <div>
+    <pre>undefined instanceof undefined    // Right-hand side of 'instanceof' is not an object</pre>
+    <pre>null instanceof null              // Right-hand side of 'instanceof' is not an object</pre>
+    <pre>true instanceof Boolean           // false</pre>
+    <pre>‘str’ instanceof String           // false</pre>
+    <pre>1 instanceof Number               // false</pre>
+    <pre>Symbol(1) instanceof Symbol       // false</pre>
+    <pre>1n instanceof BigInt              // false</pre>
+    <pre>[] instanceof Array               // true</pre>
+    <pre>{} instanceof Object              // true</pre>
+    <pre>function(){} instanceof Function  // true</pre>
+  </div>
+</details>
+<details>
+  <summary>constructor属性：无法判断Symbol类型</summary>
+  <div>
+    <pre>true.constructor === Boolean             // true</pre>
+    <pre>‘str’.constructor === String               // true</pre>
+    <pre>1.constructor === Number                 // true</pre>
+    <pre>Symbol(1).constructor === Symbol         // false</pre>
+    <pre>1n.constructor === BigInt                // true</pre>
+    <pre>[].constructor === Array                 // true</pre>
+    <pre>({}).constructor === Object              // true</pre>
+    <pre>(function(){}).constructor === Function  // true</pre>
+    <pre>如果修改一个对象的prototype原型，则对象的constructor为prototype的类型</pre>
+  </div>
+</details>
+<details>
+  <summary>Object.prototype.toString.call() 完美办法</summary>
+  <div>
+    <pre>Object.prototype.toString.call(undefined)       // '[object Undefined]'</pre>
+    <pre>Object.prototype.toString.call(null)            // '[object Null]'</pre>
+    <pre>Object.prototype.toString.call(true)            // '[object Boolean]'</pre>
+    <pre>Object.prototype.toString.call(‘str’)             // '[object String]'</pre>
+    <pre>Object.prototype.toString.call(1)               // '[object Number]'</pre>
+    <pre>Object.prototype.toString.call(Symbol(1))       // '[object Symbol]'</pre>
+    <pre>Object.prototype.toString.call(1n)              // '[object BigInt]'</pre>
+    <pre>Object.prototype.toString.call([])              // '[object Array]'</pre>
+    <pre>Object.prototype.toString.call({})              // '[object Object]'</pre>
+    <pre>Object.prototype.toString.call(function(){})    // '[object Function]'</pre>
+  </div>
+</details>
+
+## 4.typeof null的结果是什么，为什么？
+<details>
+<summary>查看答案</summary>
+<pre>typeof null; // object </pre>
+<ul>
+<li>因为null的类型标签跟object一样都是000</li>
+</ul>
+</details>
+
+## 5.typeof NaN的结果是什么？
+<details>
+<summary>查看答案</summary>
+<div>
+number
+</div>
+</details>
+
+## 6.判断数组的方式有哪些？
+<details>
+<summary>查看答案</summary>
+<pre>[] instanceof Array</pre>
+<pre>[].constructor === Array           // 构造函数</pre>
+<pre>Array.prototype.isPrototypeof([])  // 原型方法isPrototypeof()判断Array是否在数组的原型链上</pre>
+<pre>[].__proto__ === Array.prototype   // 数组的__proto__属性 = Array的原型</pre>
+<pre>Object.getPrototypeOf(arr) === Array.prototype // Object.getPrototypeOf()返回指定对象的原型</pre>
+<pre>Object.prototype.toString.call([]) === ‘[object Array]’</pre>
+<pre>Array.isArray([])</pre>
+</details>
+
+## 7.类型转换的方式有哪些？
+<details>
+<summary>隐式类型转换: 运算符两边类型不同,js在计算中自动进行的类型转换</summary>
+<ul>
+<li>数字 加 字符串: 转字符串</li>
+<li>数字 加 undefined/null/boolean: 转数字</li>
+<li>数字 减/乘/除 字符串: 转数字</li>
+<li>符串 加 undefined/null/boolean: 转字符串</li>
+<li>boolean 加/减/乘/除 undefined/null: 转数字(undefined转数字为NaN)</li>
+<li>对象的加/减/乘/除: 转Object.prototype.toString.call(obj)</li>
+<li>等于号、大于号、小于号的比较运算</li>
+</ul>
+</details>
+<details>
+<summary>强制类型转换: 手动调用全局函数来实现</summary>
+<ul>
+<li>Number()</li>
+<li>Boolean()</li>
+<li>String()</li>
+<li>parseInt()</li>
+<li>parseFloat()</li>
+</ul>
+</details>
+
+## 8.类数组转数组的方法
+<details>
+<summary>查看答案</summary>
+<ul>
+<li>使用<Highlight>call</Highlight>和<Highlight>apply</Highlight>方法改变<Highlight>this</Highlight>指向，再<Highlight>slice</Highlight>/<Highlight>splice</Highlight>/<Highlight>concat</Highlight>原型方法</li>
+<li>使用<Highlight>Array.from</Highlight>转数组</li>
+<li>使用<Highlight>...</Highlight>扩展运算符转数组</li>
+<li>创建一个空数组，使用<Highlight>for...in</Highlight>遍历类数组的<Highlight>key</Highlight>/<Highlight>value</Highlight></li>
+</ul>
+</details>
+
+
+## 9.为什么0.1+0.2 ! == 0.3，如何让其相等现？浮点型精度问题的处理
+<details>
+<summary>查看答案</summary>
+<ul>
+<li>计算机中数据是通过二进制方式存储的，0.1+0.2两个数的二进制之和。0.1+0.2 = 0.30000000000000004</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
