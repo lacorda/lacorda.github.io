@@ -170,12 +170,12 @@ const config = {
       },
       algolia: {
         // The application ID provided by Algolia
-        appId: 'QUY2MQ2NGM',
+        appId: '5IUS20IL5O',
 
         // Public API key: it is safe to commit it
-        apiKey: '81f006887e1fd026f7360336eeceb378',
+        apiKey: '9e49e08aeeef19518f50761e15dcf9dd',
 
-        indexName: 'lacorda',
+        indexName: 'lacordaaa',
 
         contextualSearch: true,
       }
