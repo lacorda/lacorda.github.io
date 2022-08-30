@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[1334],{2180:a=>{a.exports=JSON.parse('{"label":"\u6570\u7ec4","permalink":"/topic/tags/\u6570\u7ec4","allTagsPath":"/topic/tags","count":1,"items":[{"id":"Javascript\u7bc7/\u6570\u7ec4","title":"\u6570\u7ec4","description":"\u6570\u7ec4","permalink":"/topic/d48e3de"}]}')}}]);

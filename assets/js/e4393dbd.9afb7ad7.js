@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[8945],{5871:a=>{a.exports=JSON.parse('{"label":"clashX\u4f7f\u7528","permalink":"/blog/tags/clash-x\u4f7f\u7528","allTagsPath":"/blog/tags","count":1}')}}]);

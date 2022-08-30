@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[1485],{2862:t=>{t.exports=JSON.parse('{"label":"Proxy","permalink":"/topic/tags/proxy","allTagsPath":"/topic/tags","count":1,"items":[{"id":"ES6+\u7bc7/Proxy","title":"Proxy","description":"Proxy","permalink":"/topic/483b842"}]}')}}]);
