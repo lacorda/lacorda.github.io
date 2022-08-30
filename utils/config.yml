@@ -1,0 +1,29 @@
+#批量添加和修改、删除front matter配置文件
+
+# 需要批量处理的路径，docs文件夹内的文件夹  (数组，映射路径：path[0]/path[1]/path[2] ... )
+path:
+  # - docs # docs/topic/blog
+
+# 要删除的字段, 有时候多写的一些多余字段
+delete:
+  - title
+  # docs/topic
+  # - authors
+
+ # 要添加、修改front matter的数据 （front matter中没有的数据则添加，已有的数据则覆盖）
+data:
+  # docs/topic
+  # id:  # docs唯一id，默认为文件路径，不写则直接使用默认
+  # title: # 文档的文本标题。用于页面元数据和多个位置的备用值(边栏、下一个/上一个按钮...), 不写则直接使用第一个标题
+  # sidebar_label: # 此文档的文档侧边栏中显示的文本, 不写则使用title
+  # sidebar_position: # 侧边栏中文档的位置
+  # hide_table_of_contents: # 是否将隐藏右侧目录
+  # pagination_next: # 侧边是否显示下一页
+  # pagination_pre: # 侧边是否显示上一页
+  # keywords: # 用于文档页面的关键字元标记，用于搜索引擎
+  description: '' # 文档的说明，该说明将插入meta content, 用于搜索引擎
+  # image: # 封面或缩略图，将使用时显示链接到您的文章
+  slug: / # 自定义文档 URL (/<routeBasePath>/<slug>). 支持多种模式:slug: my-doc, slug: /my/path/myDoc, slug: /
+  tags: [] # 标签
+  # last_update: # 最后更新的时间
+
