@@ -169,14 +169,9 @@ const config = {
         respectPrefersColorScheme: false, // 使用系统自带模式，而不使用defaultMode
       },
       algolia: {
-        // The application ID provided by Algolia
-        appId: '5IUS20IL5O',
-
-        // Public API key: it is safe to commit it
-        apiKey: '9e49e08aeeef19518f50761e15dcf9dd',
-
-        indexName: 'lacordaaa',
-
+        appId: 'FKJV088HR1',
+        apiKey: 'c721f4b7746401603de71e13e026793f',
+        indexName: 'lacorda',
         contextualSearch: true,
       }
     }),
