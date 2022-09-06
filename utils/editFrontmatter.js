@@ -9,7 +9,7 @@ const yamlToJs = require('yamljs')
 const inquirer = require('inquirer') // 命令行操作
 const chalk = require('chalk') // 命令行打印美化
 const readFileList = require('./modules/readFileList');
-const { type, repairDate} = require('./modules/fn');
+const { type, repairDate } = require('./modules/fn');
 const log = console.log
 
 const configPath = path.join(__dirname, 'config.yml') // 配置文件的路径
@@ -32,15 +32,15 @@ async function main() {
     edit = answers.edit
   })
 
-  if(!edit) { // 退出操作
+  if (!edit) { // 退出操作
     return
   }
-  
+
   const config = yamlToJs.load(configPath) // 解析配置文件的数据转为js对象
 
   if (!config.path) {
     const argvs = process.argv.slice(2);
-    console.log('argvs===',argvs);
+    console.log('argvs===', argvs);
     config.path = argvs;
   }
 
@@ -59,7 +59,7 @@ async function main() {
 
     const configData = {
       ...config.data,
-      slug: `/${file.unicode}`,
+      slug: matterData.slug || `/${file.unicode}`,
       tags: [file.name],
       description: file.name
     };
@@ -72,11 +72,11 @@ async function main() {
     } else if (config.path.includes('blog')) {
       configData.authors = ['Rabbit'];
     }
-  
-    if(matterData.date && type(matterData.date) === 'date') {
+
+    if (matterData.date && type(matterData.date) === 'date') {
       matterData.date = repairDate(matterData.date) // 修复时间格式
     }
-    const newData = jsonToYaml.stringify(matterData).replace(/\n\s{2}/g,"\n").replace(/"/g,"")  + '---\r\n' + fileMatterObj.content;
+    const newData = jsonToYaml.stringify(matterData).replace(/\n\s{2}/g, "\n").replace(/"/g, "") + '---\r\n' + fileMatterObj.content;
     fs.writeFileSync(file.filePath, newData); // 写入
     log(chalk.green(`update frontmatter：${file.filePath} `))
   })
