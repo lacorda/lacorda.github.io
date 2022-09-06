@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[9783],{2424:a=>{a.exports=JSON.parse('{"label":"DOM\u64cd\u4f5c","permalink":"/docs/tags/dom\u64cd\u4f5c","allTagsPath":"/docs/tags","count":1,"items":[{"id":"HTML\u7bc7/DOM\u64cd\u4f5c","title":"DOM\u64cd\u4f5c","description":"DOM\u64cd\u4f5c","permalink":"/docs/88d66a7"}]}')}}]);

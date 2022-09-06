@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[5207],{1572:a=>{a.exports=JSON.parse('{"name":"docusaurus-theme-search-algolia","id":"default"}')}}]);
