@@ -67,7 +67,7 @@ const config = {
         },
         blog: {
           showReadingTime: false,
-          blogSidebarTitle: '记录',  // blog侧边栏总标题
+          blogSidebarTitle: '技巧篇',  // blog侧边栏总标题
           blogSidebarCount: 'ALL', // 所有博文
           editUrl: 'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
         },
@@ -122,7 +122,7 @@ const config = {
           {
             to: 'blog',
             position: 'left',
-            label: '记录',
+            label: '技巧篇',
           },
           {
             type: 'search',
