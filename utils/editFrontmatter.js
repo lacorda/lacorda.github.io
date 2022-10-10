@@ -77,7 +77,10 @@ async function main() {
       matterData.date = repairDate(matterData.date) // 修复时间格式
     }
     const newData = jsonToYaml.stringify(matterData).replace(/\n\s{2}/g, "\n").replace(/"/g, "") + '---\r\n' + fileMatterObj.content;
-    fs.writeFileSync(file.filePath, newData); // 写入
-    log(chalk.green(`update frontmatter：${file.filePath} `))
+
+    if (dataStr !== newData) {
+      fs.writeFileSync(file.filePath, newData); // 写入
+      log(chalk.green(`update frontmatter：${file.filePath} `))
+    }
   })
 }
