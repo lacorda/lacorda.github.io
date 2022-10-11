@@ -69,7 +69,7 @@ async function main() {
 
     if (config.path.includes('docs') || config.path.includes('topic')) {
       delete matterData.authors;
-    } else if (config.path.includes('blog')) {
+    } else if (config.path.includes('blog') || config.path.includes('someerror')) {
       configData.authors = ['Rabbit'];
     }
 

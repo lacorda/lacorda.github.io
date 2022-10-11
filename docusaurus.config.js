@@ -36,6 +36,16 @@ const config = {
         sidebarPath: require.resolve('./sidebars/topic.js'),
       },
     ],
+    [
+      '@docusaurus/plugin-content-blog', // 多blog
+      {
+        id: 'someerror',
+        path: 'someerror',
+        routeBasePath: 'someerror',
+        blogSidebarTitle: '技巧篇',  // blog侧边栏总标题
+        blogSidebarCount: 'ALL', // 所有博文
+      },
+    ],
   ],
 
   // 插件 - 主题: 实时代码编辑
@@ -123,6 +133,11 @@ const config = {
             to: 'blog',
             position: 'left',
             label: '技巧篇',
+          },
+          {
+            to: 'someerror',
+            position: 'left',
+            label: '报错篇',
           },
           {
             type: 'search',
