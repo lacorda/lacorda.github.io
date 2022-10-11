@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[8098],{3378:e=>{e.exports=JSON.parse('{"label":"Component","permalink":"/docs/tags/component","allTagsPath":"/docs/tags","count":1,"items":[{"id":"React\u7bc7/Component","title":"Component","description":"Component","permalink":"/docs/ee17c27"}]}')}}]);
