@@ -15,7 +15,8 @@
     "matter:docs": "node utils/editFrontmatter.js docs",
     "matter:topic": "node utils/editFrontmatter.js topic",
     "matter:blog": "node utils/editFrontmatter.js blog",
-    "matter:someerror": "node utils/editFrontmatter.js someerror"
+    "matter:someerror": "node utils/editFrontmatter.js someerror",
+    "matter": "npm run matter:docs && npm run matter:topic && npm run matter:blog && npm run matter:someerror"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.1",
