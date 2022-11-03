@@ -154,7 +154,7 @@ const config = {
             docsPluginId: 'interview',
             docId: 'Javascript篇/数据类型',
             position: 'right',
-            className: 'header-interview',
+            className: 'header-interview iconfont',
             'aria-label': '面试题',
             label: '面试题'
           },
@@ -165,7 +165,7 @@ const config = {
           {
             href: 'https://github.com/lacorda',
             position: 'right',
-            className: 'header-github-link',
+            className: 'header-github-link iconfont',
             'aria-label': 'GitHub repository',
           },
         ]
