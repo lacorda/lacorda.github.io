@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[3604],{4733:e=>{e.exports=JSON.parse('{"label":"Generator","permalink":"/interview/tags/generator","allTagsPath":"/interview/tags","count":1,"items":[{"id":"ES6+\u7bc7/Generator","title":"Generator","description":"Generator","permalink":"/interview/8d72fb1"}]}')}}]);
