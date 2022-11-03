@@ -28,21 +28,30 @@ const config = {
   plugins: [
     'docusaurus-plugin-sass',
     [
-      '@docusaurus/plugin-content-docs', // 多docs
-      {
-        id: 'topic',
-        path: 'topic',
-        routeBasePath: 'topic',
-        sidebarPath: require.resolve('./sidebars/topic.js'),
+      '@docusaurus/plugin-content-docs',
+      { // 多docs - 技巧篇
+        id: 'tips',
+        path: '02.tips',
+        routeBasePath: 'tips',
+        sidebarPath: require.resolve('./sidebars/tips.js'),
       },
     ],
     [
-      '@docusaurus/plugin-content-blog', // 多blog
-      {
+      '@docusaurus/plugin-content-docs',
+      { // 多docs - 面试题
+        id: 'interview',
+        path: '99.interview',
+        routeBasePath: 'interview',
+        sidebarPath: require.resolve('./sidebars/interview.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-blog',
+      { // 多blog - 报错篇
         id: 'someerror',
-        path: 'someerror',
+        path: '03.someerror',
         routeBasePath: 'someerror',
-        blogSidebarTitle: '技巧篇',  // blog侧边栏总标题
+        blogSidebarTitle: '报错篇',  // blog侧边栏总标题
         blogSidebarCount: 'ALL', // 所有博文
       },
     ],
@@ -58,6 +67,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          path: '01.docs',
           sidebarPath: require.resolve('./sidebars/docs.js'),
           // EditUrlFunction
           // editUrl: ({ version, versionDocsDirPath, docPath, permalink, locale }) => {
@@ -75,12 +85,12 @@ const config = {
             [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
           ],
         },
-        blog: {
-          showReadingTime: false,
-          blogSidebarTitle: '技巧篇',  // blog侧边栏总标题
-          blogSidebarCount: 'ALL', // 所有博文
-          editUrl: 'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
-        },
+        // blog: {
+        //   showReadingTime: false,
+        //   blogSidebarTitle: '技巧篇',  // blog侧边栏总标题
+        //   blogSidebarCount: 'ALL', // 所有博文
+        //   editUrl: 'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
+        // },
         theme: {
           customCss: require.resolve('./src/styles/custom.scss'),
         },
@@ -124,20 +134,29 @@ const config = {
           },
           {
             type: 'doc',
-            docsPluginId: 'topic',
-            docId: 'Javascript篇/数据类型',
-            position: 'left',
-            label: '面试题',
-          },
-          {
-            to: 'blog',
+            docsPluginId: 'tips',
+            docId: 'Charles篇/界面介绍',
             position: 'left',
             label: '技巧篇',
           },
+          // {
+          //   to: 'blog',
+          //   position: 'left',
+          //   label: '技巧篇',
+          // },
           {
             to: 'someerror',
             position: 'left',
             label: '报错篇',
+          },
+          {
+            type: 'doc',
+            docsPluginId: 'interview',
+            docId: 'Javascript篇/数据类型',
+            position: 'right',
+            className: 'header-interview',
+            'aria-label': '面试题',
+            label: '面试题'
           },
           {
             type: 'search',
