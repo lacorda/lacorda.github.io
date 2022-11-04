@@ -2,11 +2,31 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lacorda.github.io/someerror</id>
     <title>Lacorda Blog</title>
-    <updated>2022-10-11T10:25:53.000Z</updated>
+    <updated>2022-11-04T07:09:09.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lacorda.github.io/someerror"/>
     <subtitle>Lacorda Blog</subtitle>
     <icon>https://lacorda.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[02.IOS中正则兼容性的坑]]></title>
+        <id>/15c58c1</id>
+        <link href="https://lacorda.github.io/someerror/15c58c1"/>
+        <updated>2022-11-04T07:09:09.000Z</updated>
+        <summary type="html"><![CDATA[IOS中正则兼容性的坑]]></summary>
+        <content type="html"><![CDATA[<p>部分断言正则在 <code>Safari</code> 中不兼容，详见：
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7" target="_blank" rel="noopener noreferrer">mdn web docs</a></p><p><code>?&lt;=</code> 和<code>?&lt;!</code> 在 <code>Safari</code> 中无法兼容，会报错，在<code>async-validator</code>库中，直接阻止 <code>Promise</code> 回调无响应</p>]]></content>
+        <category label="IOS中正则兼容性的坑" term="IOS中正则兼容性的坑"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[03.接口 301 Moved Permanently]]></title>
+        <id>/433ab77</id>
+        <link href="https://lacorda.github.io/someerror/433ab77"/>
+        <updated>2022-11-04T07:09:09.000Z</updated>
+        <summary type="html"><![CDATA[接口 301 Moved Permanently]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="场景">场景<a class="hash-link" href="#场景" title="标题的直接链接">​</a></h2><p>接口访问报错：301 Moved Permanently</p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="解释">解释：<a class="hash-link" href="#解释" title="标题的直接链接">​</a></h2><p>「301 Moved Permanently」表示永久重定向，说明请求的资源已经不存在了
+301 和 302 都会在响应头里使用字段 <code>Location</code> ，指明后续要跳转的 <code>URL</code>，<code>浏览器</code>、<code>postman</code>等会自动定向新的 URL。</p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="解决">解决：<a class="hash-link" href="#解决" title="标题的直接链接">​</a></h2><ol><li>检查接口请求地址是否正确</li><li>检查网络环境</li><li>检查是不是正在发版导致</li></ol>]]></content>
+        <category label="接口 301 Moved Permanently" term="接口 301 Moved Permanently"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[01.npm install时报错EINTEGRITY]]></title>
         <id>/9c7d39d</id>

@@ -4,10 +4,30 @@
         <title>Lacorda Blog</title>
         <link>https://lacorda.github.io/someerror</link>
         <description>Lacorda Blog</description>
-        <lastBuildDate>Tue, 11 Oct 2022 10:25:53 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 04 Nov 2022 07:09:09 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-Hans</language>
+        <item>
+            <title><![CDATA[02.IOS中正则兼容性的坑]]></title>
+            <link>https://lacorda.github.io/someerror/15c58c1</link>
+            <guid>/15c58c1</guid>
+            <pubDate>Fri, 04 Nov 2022 07:09:09 GMT</pubDate>
+            <description><![CDATA[IOS中正则兼容性的坑]]></description>
+            <content:encoded><![CDATA[<p>部分断言正则在 <code>Safari</code> 中不兼容，详见：
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7" target="_blank" rel="noopener noreferrer">mdn web docs</a></p><p><code>?&lt;=</code> 和<code>?&lt;!</code> 在 <code>Safari</code> 中无法兼容，会报错，在<code>async-validator</code>库中，直接阻止 <code>Promise</code> 回调无响应</p>]]></content:encoded>
+            <category>IOS中正则兼容性的坑</category>
+        </item>
+        <item>
+            <title><![CDATA[03.接口 301 Moved Permanently]]></title>
+            <link>https://lacorda.github.io/someerror/433ab77</link>
+            <guid>/433ab77</guid>
+            <pubDate>Fri, 04 Nov 2022 07:09:09 GMT</pubDate>
+            <description><![CDATA[接口 301 Moved Permanently]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="场景">场景<a class="hash-link" href="#场景" title="标题的直接链接">​</a></h2><p>接口访问报错：301 Moved Permanently</p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="解释">解释：<a class="hash-link" href="#解释" title="标题的直接链接">​</a></h2><p>「301 Moved Permanently」表示永久重定向，说明请求的资源已经不存在了
+301 和 302 都会在响应头里使用字段 <code>Location</code> ，指明后续要跳转的 <code>URL</code>，<code>浏览器</code>、<code>postman</code>等会自动定向新的 URL。</p><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="解决">解决：<a class="hash-link" href="#解决" title="标题的直接链接">​</a></h2><ol><li>检查接口请求地址是否正确</li><li>检查网络环境</li><li>检查是不是正在发版导致</li></ol>]]></content:encoded>
+            <category>接口 301 Moved Permanently</category>
+        </item>
         <item>
             <title><![CDATA[01.npm install时报错EINTEGRITY]]></title>
             <link>https://lacorda.github.io/someerror/9c7d39d</link>

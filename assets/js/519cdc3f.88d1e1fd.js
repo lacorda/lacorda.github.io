@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[3178],{3115:e=>{e.exports=JSON.parse('{"permalink":"/someerror/tags/\u63a5\u53e3-301-moved-permanently","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

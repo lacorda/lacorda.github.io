@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[1453],{2981:e=>{e.exports=JSON.parse('{"label":"\u63a5\u53e3 301 Moved Permanently","permalink":"/someerror/tags/\u63a5\u53e3-301-moved-permanently","allTagsPath":"/someerror/tags","count":1}')}}]);
