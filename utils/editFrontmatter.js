@@ -67,9 +67,11 @@ async function main() {
     Object.assign(matterData, configData); // 将配置数据合并到front Matter对象
     delete matterData.title;
 
-    if (config.path.includes('docs') || config.path.includes('topic')) {
+    const path = config.path[0];
+
+    if (path.includes('docs') || path.includes('tips')) {
       delete matterData.authors;
-    } else if (config.path.includes('blog') || config.path.includes('someerror')) {
+    } else if (path.includes('blog') || path.includes('someerror')) {
       configData.authors = ['Rabbit'];
     }
 

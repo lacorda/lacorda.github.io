@@ -85,12 +85,13 @@ const config = {
             [require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }],
           ],
         },
-        // blog: {
-        //   showReadingTime: false,
-        //   blogSidebarTitle: '技巧篇',  // blog侧边栏总标题
-        //   blogSidebarCount: 'ALL', // 所有博文
-        //   editUrl: 'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
-        // },
+        blog: {
+          path: '10.blog',
+          showReadingTime: false,
+          blogSidebarTitle: 'More',  // blog侧边栏总标题
+          blogSidebarCount: 'ALL', // 所有博文
+          editUrl: 'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
+        },
         theme: {
           customCss: require.resolve('./src/styles/custom.scss'),
         },
@@ -139,15 +140,15 @@ const config = {
             position: 'left',
             label: '技巧篇',
           },
-          // {
-          //   to: 'blog',
-          //   position: 'left',
-          //   label: '技巧篇',
-          // },
           {
             to: 'someerror',
             position: 'left',
             label: '报错篇',
+          },
+          {
+            to: 'blog',
+            position: 'left',
+            label: 'MORE',
           },
           {
             type: 'doc',
