@@ -2,11 +2,28 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://lacorda.github.io/blog</id>
     <title>Lacorda Blog</title>
-    <updated>2022-11-04T07:09:09.000Z</updated>
+    <updated>2022-11-23T07:02:35.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://lacorda.github.io/blog"/>
     <subtitle>Lacorda Blog</subtitle>
     <icon>https://lacorda.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[08.replace方法的正确使用]]></title>
+        <id>/08.replace方法的正确使用</id>
+        <link href="https://lacorda.github.io/blog/08.replace方法的正确使用"/>
+        <updated>2022-11-23T07:02:35.000Z</updated>
+        <summary type="html"><![CDATA[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#%E8%AF%AD%E6%B3%95]]></summary>
+        <content type="html"><![CDATA[<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#%E8%AF%AD%E6%B3%95" target="_blank" rel="noopener noreferrer">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#%E8%AF%AD%E6%B3%95</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[00.收藏网站]]></title>
+        <id>/e397755</id>
+        <link href="https://lacorda.github.io/blog/e397755"/>
+        <updated>2022-11-04T07:09:09.000Z</updated>
+        <summary type="html"><![CDATA[收藏网站]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="画图网站">画图网站<a class="hash-link" href="#画图网站" title="标题的直接链接">​</a></h2><ol><li><a href="https://app.diagrams.net/" target="_blank" rel="noopener noreferrer">draw.io</a></li></ol><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="软件安装网站">软件安装网站<a class="hash-link" href="#软件安装网站" title="标题的直接链接">​</a></h2><ol><li><a href="https://www.hereitis.cn/" target="_blank" rel="noopener noreferrer">hereitis</a></li><li><a href="https://xclient.info/" target="_blank" rel="noopener noreferrer">xclient</a></li></ol>]]></content>
+        <category label="收藏网站" term="收藏网站"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[02.web实时推送方式]]></title>
         <id>/b5580ff</id>
@@ -63,15 +80,6 @@
         <summary type="html"><![CDATA[css中直接内联使用svg图片]]></summary>
         <content type="html"><![CDATA[<p><code>background-image</code> 添加 <code>data:image/svg+xml;utf8,</code> 后面直接使用 <code>svg</code> 资源即可</p><div class="language-css codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-css codeBlock_bY9V thin-scrollbar"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token selector class" style="color:rgb(255, 121, 198)">.icon-arrow-down</span><span class="token plain"> </span><span class="token punctuation" style="color:rgb(248, 248, 242)">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token property">width</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"> </span><span class="token number">20</span><span class="token unit">px</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"> </span><span class="token property">height</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"> </span><span class="token number">20</span><span class="token unit">px</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token property">background</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"> </span><span class="token url function" style="color:rgb(80, 250, 123)">url</span><span class="token url punctuation" style="color:rgb(248, 248, 242)">(</span><span class="token url string url" style="color:rgb(255, 121, 198)">'data:image/svg+xml;utf8,&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"&gt;&lt;path fill="#00A5E0" d="M145.659,68.949c-5.101-5.208-13.372-5.208-18.473,0L99.479,97.233 L71.772,68.949c-5.1-5.208-13.371-5.208-18.473,0c-5.099,5.208-5.099,13.648,0,18.857l46.18,47.14l46.181-47.14 C150.759,82.598,150.759,74.157,145.659,68.949z"/&gt;&lt;/svg&gt;'</span><span class="token url punctuation" style="color:rgb(248, 248, 242)">)</span><span class="token plain"> no-repeat center</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">    </span><span class="token property">background-size</span><span class="token punctuation" style="color:rgb(248, 248, 242)">:</span><span class="token plain"> </span><span class="token number">100</span><span class="token unit">%</span><span class="token punctuation" style="color:rgb(248, 248, 242)">;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain"></span><span class="token punctuation" style="color:rgb(248, 248, 242)">}</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="复制代码到剪贴板" title="复制" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg class="copyButtonIcon_y97N" viewBox="0 0 24 24"><path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg class="copyButtonSuccessIcon_LjdS" viewBox="0 0 24 24"><path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>]]></content>
         <category label="css中直接内联使用svg图片" term="css中直接内联使用svg图片"/>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[00.收藏网站]]></title>
-        <id>/e397755</id>
-        <link href="https://lacorda.github.io/blog/e397755"/>
-        <updated>2022-11-04T03:37:49.961Z</updated>
-        <summary type="html"><![CDATA[收藏网站]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="画图网站">画图网站<a class="hash-link" href="#画图网站" title="标题的直接链接">​</a></h2><ol><li><a href="https://app.diagrams.net/" target="_blank" rel="noopener noreferrer">draw.io</a></li></ol><h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="软件安装网站">软件安装网站<a class="hash-link" href="#软件安装网站" title="标题的直接链接">​</a></h2><ol><li><a href="https://www.hereitis.cn/" target="_blank" rel="noopener noreferrer">hereitis</a></li><li><a href="https://xclient.info/" target="_blank" rel="noopener noreferrer">xclient</a></li></ol>]]></content>
-        <category label="收藏网站" term="收藏网站"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[01.Utterances评论插件]]></title>

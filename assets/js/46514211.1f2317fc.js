@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[8551],{6126:(e,a,l)=>{l.r(a),l.d(a,{default:()=>u});var t=l(7294);const u=e=>t.createElement("div",null,"\u8fd9\u662f\u4e00\u4e2a example")}}]);

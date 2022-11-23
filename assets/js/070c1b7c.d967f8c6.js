@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[8444],{1210:(e,a,u)=>{u.r(a),u.d(a,{default:()=>c});var t=u(7294);u(6791);function c(){return t.createElement("div",null,"abc")}}}]);
