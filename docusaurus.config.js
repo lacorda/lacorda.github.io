@@ -2,6 +2,7 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+// const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -55,6 +56,13 @@ const config = {
         blogSidebarCount: 'ALL', // 所有博文
       },
     ],
+    // () => ({
+    //   postBuild() {
+    //     new MonacoWebpackPlugin({
+    //       languages: ['json']
+    //     })
+    //   }
+    // })
   ],
 
   // 插件 - 主题: 实时代码编辑
@@ -93,7 +101,11 @@ const config = {
           editUrl: 'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
         },
         theme: {
-          customCss: require.resolve('./src/styles/custom.scss'),
+          customCss: [
+            require.resolve('./src/styles/custom.scss'),
+            require.resolve('antd/lib/button/style/index.css'),
+            require.resolve('antd/lib/message/style/index.css'),
+          ]
         },
       }),
     ],
@@ -151,6 +163,12 @@ const config = {
             label: 'MORE',
           },
           {
+            to: '/site#/code',
+            position: 'left',
+            className: 'header-menu iconfont icon-code',
+            'aria-label': 'GitHub repository',
+          },
+          {
             type: 'doc',
             docsPluginId: 'interview',
             docId: 'Javascript篇/数据类型',
@@ -158,13 +176,6 @@ const config = {
             className: 'header-menu iconfont icon-book',
             'aria-label': '面试题',
             label: '面试题'
-          },
-          {
-            to: '/site',
-            position: 'right',
-            className: 'header-menu iconfont icon-experiment',
-            'aria-label': 'GitHub repository',
-            label: 'Demo'
           },
           {
             type: 'search',

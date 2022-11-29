@@ -1,0 +1,8 @@
+$prefixCls: 'pager-notfound';
+
+.#{$prefixCls} {
+  font-size: 24px;
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+}
