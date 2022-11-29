@@ -81,7 +81,11 @@
 }
 
 // 黑暗模式
-[data-theme='dark'] {}
+[data-theme='dark'] {
+  .pager-code__previewer {
+    border-color: #373739;
+  }
+}
 
 // 白天模式
 [data-theme='light'] {

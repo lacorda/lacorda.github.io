@@ -1,33 +1,61 @@
-import React, { forwardRef, useState, useImperativeHandle } from 'react';
+import React, { forwardRef, useState, useRef, useEffect, useImperativeHandle } from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import { MONACO_EDITOR_CONFIG } from './config.js';
+import themeConfig from './theme'
 
 const Editor = (props, ref) => {
-  const { value } = props;
+  const {
+    value,
+    theme,
+    onChange,
+    onMount,
+    beforeMount,
+  } = props;
 
-  const [editor, setEditor] = useState({});
+  const [reactEditor, setEditor] = useState({});
 
-  useImperativeHandle(ref, () => (editor));
+  useImperativeHandle(ref, () => (reactEditor));
 
-  const editorDidMount = (e, m) => {
-    e.focus();
-    setEditor({
-      editor: e,
-      monaco: m
-    })
+  const handleChange = (value, event) => {
+    onChange && onChange(value, event);
+  }
+
+  const handleDidMount = (editor, monaco) => {
+    setEditor({ editor, monaco });
+    onMount && onMount({ editor, monaco })
+  }
+
+  const handleWillMount = (monaco) => {
+    beforeMount && beforeMount({ monaco })
+  }
+
+  const handleValidation = (markers) => {
+    markers.forEach(marker => console.log('onValidate:', marker.message));
   }
 
   return (
     <BrowserOnly>
       {() => {
-        const MonacoEditor = require('@monaco-editor/react').default;
+        const { default: MonacoEditor, loader } = require('@monaco-editor/react');
+        loader.init().then((monaco) => {
+          for (const key in themeConfig) {
+            monaco.editor.defineTheme(key, themeConfig[key]);
+          }
+        })
 
         return (
           <MonacoEditor
-            ref={ref}
             {...MONACO_EDITOR_CONFIG}
-            value={value}
-            editorDidMount={editorDidMount}
+            // defaultValue={value}
+            // editorDidMount={editorDidMount}
+            theme={theme}
+            defaultLanguage="javascript"
+            defaultValue={value}
+            // loading={null}
+            onChange={handleChange}
+            onMount={handleDidMount}
+            beforeMount={handleWillMount}
+            onValidate={handleValidation}
           />
         )
       }}

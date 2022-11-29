@@ -10,16 +10,18 @@ const Code = () => {
   const prefixCls = 'pager-code';
   const bem = (e, m) => { return genBem(prefixCls, e, m) };
 
-  const [code, setCode] = useState('');
-
   const editorRef = createRef();
+
+  const [code, setCode] = useState('');
+  const [theme, setTheme] = useState();
+
   let observer = null;
   const $container = document.getElementById('__docusaurus');
 
   useEffect(() => {
     // 修改编辑器主题
     observer = observerTheme((theme) => {
-      editorRef.current?.monaco?.editor?.setTheme(theme === 'dark' ? 'vs-dark' : 'vs');
+      setTheme(theme === 'dark' ? 'customDark' : 'xcode');
     });
 
     $container.style.height = '100%';
@@ -47,6 +49,7 @@ const Code = () => {
         <div className={bem('editor')}>
           <Editor
             ref={editorRef}
+            theme={theme}
             value={DEFAULT_CODE}
           />
         </div>
@@ -55,7 +58,7 @@ const Code = () => {
         <Button type="primary" size="sm" onClick={doIt}>运行 &gt;</Button>
       </div>
       <div className={bem('previewer')}>
-        <div className={bem('header')}>结果</div>
+        <div className={bem('header')}>Result</div>
         {code}
       </div>
     </div>
