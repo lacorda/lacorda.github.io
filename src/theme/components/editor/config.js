@@ -29,13 +29,3 @@ export const MONACO_EDITOR_CONFIG = {
     // theme: 'vs' // 官方自带三种主题vs, hc-black, or vs-dark
   },
 }
-
-export const DEFAULT_CODE = `// code
-function sum(a, b) {
-  return a + b;
-}
-
-sum(1, 2);
-`;
-
-export default MONACO_EDITOR_CONFIG;

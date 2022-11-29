@@ -2,7 +2,6 @@
 // Note: type annotations allow type checking and IDEs autocompletion
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-// const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -56,13 +55,6 @@ const config = {
         blogSidebarCount: 'ALL', // 所有博文
       },
     ],
-    // () => ({
-    //   postBuild() {
-    //     new MonacoWebpackPlugin({
-    //       languages: ['json']
-    //     })
-    //   }
-    // })
   ],
 
   // 插件 - 主题: 实时代码编辑
