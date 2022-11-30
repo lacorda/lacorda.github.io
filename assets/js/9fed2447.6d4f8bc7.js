@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[8085],{9400:s=>{s.exports=JSON.parse('{"label":"jsx","permalink":"/docs/tags/jsx","allTagsPath":"/docs/tags","count":1,"items":[{"id":"React\u7bc7/jsx","title":"jsx","description":"jsx","permalink":"/docs/71318bd"}]}')}}]);

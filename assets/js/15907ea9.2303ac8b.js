@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[4084],{72569:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/web\u5b9e\u65f6\u63a8\u9001\u65b9\u5f0f","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
