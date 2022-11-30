@@ -1,0 +1,13 @@
+$prefixCls: 'editor-component';
+
+.#{$prefixCls} {
+  height: 100%;
+
+  &__header {
+    height: 32px;
+  }
+
+  &__code {
+    height: calc(100% - 32px);
+  }
+}

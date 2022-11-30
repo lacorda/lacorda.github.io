@@ -2,7 +2,7 @@ import React, { useState, useEffect, createRef, useRef } from 'react';
 import { Editor } from '@theme/components';
 import { Button, message } from 'antd';
 import { genBem, observerTheme } from '../../_utils';
-import { DEFAULT_CODE } from './constants.js';
+import { FILES } from './constants.js';
 
 import './index.scss';
 
@@ -36,6 +36,7 @@ const Code = () => {
 
   const doIt = () => {
     try {
+      console.log('🍉  editorRef.current.editor', editorRef.current.editor, editorRef.current.editor.getValue());
       const val = editorRef.current.editor.getValue();
       setCode(eval(val));
     } catch (error) {
@@ -50,7 +51,7 @@ const Code = () => {
           <Editor
             ref={editorRef}
             theme={theme}
-            value={DEFAULT_CODE}
+            files={FILES}
           />
         </div>
       </div>

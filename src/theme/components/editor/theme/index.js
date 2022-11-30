@@ -5,5 +5,5 @@ import customDark from './dark.json';
 export default {
   xcode,
   monokai,
-  customDark
+  customDark,
 }
