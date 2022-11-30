@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Menu, Switch } from 'antd';
+import { Menu } from 'antd';
 import genMenus from './menus';
 import { useLocation } from 'react-router-dom'
 
-const Sidebar = (props, ref) => {
+const Sidebar = (props) => {
   const {
     theme,
   } = props;

@@ -1,11 +1,16 @@
 import React from 'react';
 import Layout from '@theme/Layout';
-import Code from './code';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import Code from './_code';
 
 export default function App() {
   return (
     <Layout>
-      <Code />
+      <BrowserOnly>
+        {
+          () => (<Code />)
+        }
+      </BrowserOnly>
     </Layout>
   )
 }

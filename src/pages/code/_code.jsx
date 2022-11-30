@@ -1,10 +1,10 @@
-import React, { useState, useEffect, createRef, useRef } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import { Editor } from '@theme/components';
 import { Button, message } from 'antd';
 import { genBem, observerTheme } from '@site/src/pages/_utils';
-import { FILES } from './constants.js';
+import { FILES } from './_constants.js';
 
-import './index.scss';
+import './_index.scss';
 
 const Code = () => {
   const prefixCls = 'pager-code';
