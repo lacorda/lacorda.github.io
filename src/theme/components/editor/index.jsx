@@ -82,7 +82,7 @@ const Editor = (props, ref) => {
 
         return (
           <div className={bem()}>
-            {isArray(files) && renderHeader()}
+            {filesSet.length > 1 && renderHeader()}
             <div className={bem('code')}>
               <MonacoEditor
                 {...MONACO_EDITOR_CONFIG}
