@@ -97,6 +97,7 @@ const config = {
             require.resolve('./src/styles/custom.scss'),
             require.resolve('antd/lib/button/style/index.css'),
             require.resolve('antd/lib/message/style/index.css'),
+            require.resolve('antd/lib/menu/style/index.css'),
           ]
         },
       }),
@@ -125,7 +126,7 @@ const config = {
 
       navbar: {
         title: 'LACORDA',
-        hideOnScroll: true, // 滚动时隐藏导航栏
+        hideOnScroll: false, // 滚动时隐藏导航栏
         logo: {
           alt: 'Rabbit Online, frontend',
           src: 'img/logo.png',
@@ -155,10 +156,16 @@ const config = {
             label: 'MORE',
           },
           {
-            to: '/site#/code',
+            to: '/code',
             position: 'left',
             className: 'header-menu iconfont icon-code',
-            'aria-label': 'GitHub repository',
+            'aria-label': 'codepen',
+          },
+          {
+            to: '/site',
+            position: 'left',
+            className: 'header-menu iconfont icon-democrat',
+            'aria-label': 'demo',
           },
           {
             type: 'doc',

@@ -3,8 +3,8 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import { Button } from 'antd';
 import { MONACO_EDITOR_CONFIG } from './config';
 import themeConfig from './theme'
-import { genBem } from '@site/src/pages/site/_utils';
-import { isObject, isArray } from '@site/src/pages/site/_utils/tools';
+import { genBem } from '@site/src/pages/_utils';
+import { isObject, isArray } from '@site/src/pages/_utils/tools';
 
 import './index.scss';
 

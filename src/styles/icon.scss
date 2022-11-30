@@ -2,9 +2,9 @@
 @font-face {
   font-family: 'iconfont';
   /* Project id 3748380 */
-  src: url('//at.alicdn.com/t/c/font_3748380_o2xtbm7auo.woff2?t=1669282288474') format('woff2'),
-    url('//at.alicdn.com/t/c/font_3748380_o2xtbm7auo.woff?t=1669282288474') format('woff'),
-    url('//at.alicdn.com/t/c/font_3748380_o2xtbm7auo.ttf?t=1669282288474') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_3748380_utdqj2znvq.woff2?t=1669820867438') format('woff2'),
+    url('//at.alicdn.com/t/c/font_3748380_utdqj2znvq.woff?t=1669820867438') format('woff'),
+    url('//at.alicdn.com/t/c/font_3748380_utdqj2znvq.ttf?t=1669820867438') format('truetype');
 }
 
 .iconfont {
@@ -50,4 +50,12 @@
 
 .icon-folder-open:before {
   content: "\e7d2";
+}
+
+.icon-democrat:before {
+  content: "\eb1b";
+}
+
+.icon-404:before {
+  content: "\e605";
 }

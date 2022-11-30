@@ -1,7 +1,7 @@
 import React, { useState, useEffect, createRef, useRef } from 'react';
 import { Editor } from '@theme/components';
 import { Button, message } from 'antd';
-import { genBem, observerTheme } from '../../_utils';
+import { genBem, observerTheme } from '@site/src/pages/_utils';
 import { FILES } from './constants.js';
 
 import './index.scss';
