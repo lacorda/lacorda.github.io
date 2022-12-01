@@ -7,21 +7,25 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import Routes from './_router';
 import Sidebar from './_components/sidebar'
 
-// import 'antd/lib/style/themes/default.less';
+import './_styles/index.scss';
 
 export default function App() {
   return (
     <Layout>
-      <Sidebar />
-      <BrowserOnly>
-        {
-          () => (<Routes />)
-        }
-      </BrowserOnly>
+      <div className="site-pager-wrapper">
+        <Sidebar />
+        <div className="site-pager-container">
+          <BrowserOnly>
+            {
+              () => (<Routes />)
+            }
+          </BrowserOnly>
+        </div>
 
-      {/* <Provider store={store}>
+        {/* <Provider store={store}>
         <Routes />
       </Provider> */}
+      </div>
     </Layout>
   )
 }

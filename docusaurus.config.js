@@ -170,7 +170,7 @@ const config = {
             'aria-label': 'codepen',
           },
           {
-            to: '/site',
+            to: '/site#/demo',
             position: 'left',
             className: 'header-menu iconfont icon-democrat',
             'aria-label': 'demo',

@@ -1,15 +1,38 @@
 .ant-tabs {
   color: inherit;
+}
 
-  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-    color: var(--ifm-navbar-link-hover-color);
-  }
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+.ant-menu-submenu-selected,
+.ant-menu-item-selected,
+.ant-menu-light .ant-menu-item:hover,
+.ant-menu-light .ant-menu-item-active,
+.ant-menu-light .ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-light .ant-menu-submenu-active,
+.ant-menu-light .ant-menu-submenu-title:hover,
+.ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-expand-icon,
+.ant-menu-submenu:hover > .ant-menu-submenu-title > .ant-menu-submenu-arrow {
+  color: var(--ifm-navbar-link-hover-color);
+}
 
-  .ant-tabs-ink-bar {
-    background: var(--ifm-navbar-link-hover-color);
-  }
+.ant-tabs-ink-bar,
+.ant-menu-dark.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background: var(--ifm-navbar-link-hover-color);
 }
 
 .ant-tabs-nav:before {
   border-color: transparent !important;
+}
+
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+  border-color: var(--ifm-navbar-link-hover-color);
+}
+
+.ant-menu.ant-menu-dark,
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background: var(--docsearch-searchbox-background);
 }

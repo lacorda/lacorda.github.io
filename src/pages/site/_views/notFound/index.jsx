@@ -2,7 +2,9 @@ import React from 'react';
 
 import './index.scss';
 
-export default function NotFount() {
+export default function NotFount(props) {
+
+  console.log('🍉  notfount props', props);
   const prefixCls = 'pager-notfound';
 
   return (
