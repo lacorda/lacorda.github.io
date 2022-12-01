@@ -36,9 +36,8 @@ const Code = () => {
 
   const doIt = () => {
     try {
-      console.log('🍉  editorRef.current.editor', editorRef.current.editor, editorRef.current.editor.getValue());
-      const val = editorRef.current.editor.getValue();
-      setCode(eval(val));
+      const { values } = editorRef.current;
+      setCode(eval(values.javascript));
     } catch (error) {
       message.error(error?.message);
     }

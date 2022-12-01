@@ -1,0 +1,15 @@
+.ant-tabs {
+  color: inherit;
+
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    color: var(--ifm-navbar-link-hover-color);
+  }
+
+  .ant-tabs-ink-bar {
+    background: var(--ifm-navbar-link-hover-color);
+  }
+}
+
+.ant-tabs-nav:before {
+  border-color: transparent !important;
+}

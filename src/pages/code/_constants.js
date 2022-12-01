@@ -25,20 +25,20 @@ export const DEFAULT_HTML = `<!DOCTYPE html>
 
 export const FILES = [
   {
-    name: "js",
+    name: "javascript",
     language: "javascript",
     value: DEFAULT_CODE,
   },
-  // {
-  //   name: "scss",
-  //   language: "scss",
-  //   value: DEFAULT_CSS,
-  //   readOnly: true,
-  // },
-  // {
-  //   name: "html",
-  //   language: "html",
-  //   value: DEFAULT_HTML,
-  //   readOnly: true,
-  // },
+  {
+    name: "scss",
+    language: "scss",
+    value: DEFAULT_CSS,
+    readOnly: true,
+  },
+  {
+    name: "html",
+    language: "html",
+    value: DEFAULT_HTML,
+    readOnly: true,
+  },
 ]

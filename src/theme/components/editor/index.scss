@@ -4,10 +4,14 @@ $prefixCls: 'editor-component';
   height: 100%;
 
   &__header {
-    height: 32px;
+    padding: 0 12px 0 24px;
+
+    .ant-tabs-nav {
+      margin-bottom: 0;
+    }
   }
 
   &__code {
-    height: calc(100% - 32px);
+    height: calc(100% - 46px);
   }
 }

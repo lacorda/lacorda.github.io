@@ -27,6 +27,13 @@ const config = {
   // 插件
   plugins: [
     'docusaurus-plugin-sass',
+    // [
+    //   'docusaurus-plugin-less',
+    //   {
+    //     // modifyVars: {},
+    //     javascriptEnabled: true,
+    //   }
+    // ],
     [
       '@docusaurus/plugin-content-docs',
       { // 多docs - 技巧篇
@@ -94,10 +101,11 @@ const config = {
         },
         theme: {
           customCss: [
-            require.resolve('./src/styles/custom.scss'),
             require.resolve('antd/lib/button/style/index.css'),
             require.resolve('antd/lib/message/style/index.css'),
             require.resolve('antd/lib/menu/style/index.css'),
+            require.resolve('antd/lib/tabs/style/index.css'),
+            require.resolve('./src/styles/custom.scss'),
           ]
         },
       }),
