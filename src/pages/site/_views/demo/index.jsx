@@ -1,9 +1,11 @@
 import React from 'react';
+import Container from '../../_components/container';
 
 const Demo = (props) => {
-  console.log('🍉  props', props);
   return (
-    <div>demo</div>
+    <Container {...props}>
+      <div>demo</div>
+    </Container>
   )
 }
 

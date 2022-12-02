@@ -1,3 +1,11 @@
+import React from 'react';
+import {
+  BgColorsOutlined,
+  ToolOutlined,
+  FunctionOutlined,
+  LinkOutlined,
+} from '@ant-design/icons';
+
 function getItem(label, key, icon, children, type) {
   return {
     key,
@@ -10,89 +18,64 @@ function getItem(label, key, icon, children, type) {
 
 const menus = [
   {
-    label: 'Navigation One',
-    key: 'sub1',
-    icon: null,
+    label: '我的工具',
+    key: 'tools',
+    icon: <ToolOutlined />,
     children: [
       {
         label: 'Option 1',
-        key: '1',
-        icon: null,
-      },
-      {
-        label: 'Option 2',
-        key: '2',
-        icon: null,
-      },
-      {
-        label: 'Option 3',
-        key: '3',
-        icon: null,
-      },
-      {
-        label: 'Option 4',
-        key: '4',
+        key: 'demo',
         icon: null,
       },
     ]
   },
   {
-    label: 'Navigation Two',
-    key: 'sub2',
-    icon: null,
+    label: 'HTML与CSS',
+    key: 'css',
+    icon: <BgColorsOutlined />,
     children: [
       {
         label: 'Option 5',
         key: '5',
         icon: null,
       },
-      {
-        label: 'Option 6',
-        key: '6',
-        icon: null,
-      },
-      {
-        label: 'Submenu',
-        key: 'sub3',
-        icon: null,
-        children: [
-          {
-            label: 'Option 7',
-            key: '7',
-            icon: null,
-          },
-          {
-            label: 'Option 8',
-            key: '8',
-            icon: null,
-          },
-        ]
-      },
     ]
   },
   {
-    label: 'Navigation Three',
-    key: 'sub4',
-    icon: null,
+    label: 'Javascript',
+    key: 'js',
+    icon: <FunctionOutlined />,
     children: [
       {
         label: 'Option 9',
         key: '9',
         icon: null,
       },
+    ]
+  },
+  {
+    label: 'React Hooks',
+    key: 'react',
+    icon: <LinkOutlined />,
+    children: [
       {
-        label: 'Option 10',
-        key: '10',
+        label: 'Option 13',
+        key: '13',
         icon: null,
       },
       {
-        label: 'Option 11',
-        key: '11',
+        label: 'Option 14',
+        key: '14',
         icon: null,
       },
       {
-        label: 'Option 12',
-        key: '12',
+        label: 'Option 15',
+        key: '15',
+        icon: null,
+      },
+      {
+        label: 'Option 16',
+        key: '16',
         icon: null,
       },
     ]

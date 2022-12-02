@@ -1,26 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Menu } from 'antd';
-import {
-  // useHistory, // 返回 history 对象
-  useLocation, // 返回 location 对象
-  // useParams, // 返回 URL 参数的键/值对的对象
-  // useRouteMatch, // 匹配 props.match，此处为 docusaurus 的静态路由
-} from 'react-router-dom';
 import genMenus from './menus';
 import { genBem, observerTheme } from '@site/src/pages/_utils';
 
+import './index.scss';
+
 const Sidebar = (props) => {
-  const {
-  } = props;
+  const { history } = props;
+
+  const prefixCls = 'components-sidebar';
+  const bem = (e, m) => (genBem(prefixCls, e, m));
 
   const [theme, setTheme] = useState();
-  const [current, setCurrent] = useState('1');
-
-  const location = useLocation();
-  const inValid = location.hash.replace(/\#\/(demo|example)/g, '');
-  if (inValid) {
-    return null;
-  }
+  const [current, setCurrent] = useState('demo');
 
   let observer = null;
   const items = genMenus();
@@ -40,22 +32,22 @@ const Sidebar = (props) => {
 
 
   const onClick = (e) => {
-    console.log('click ', e);
     setCurrent(e.key);
+    history.push(e.key);
   };
 
   return (
-    <Menu
-      theme={theme}
-      onClick={onClick}
-      style={{
-        width: 256,
-      }}
-      defaultOpenKeys={['sub1']}
-      selectedKeys={[current]}
-      mode="inline"
-      items={items}
-    />
+    <div className={bem()}>
+      <Menu
+        theme={theme}
+        onClick={onClick}
+        style={{ width: 240 }}
+        defaultOpenKeys={['tools']}
+        selectedKeys={[current]}
+        mode="inline"
+        items={items}
+      />
+    </div>
   )
 }
 
