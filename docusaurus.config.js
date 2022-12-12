@@ -46,22 +46,31 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       { // 多docs - 面试题
+        id: 'third',
+        path: '03.third',
+        routeBasePath: 'third',
+        sidebarPath: require.resolve('./sidebars/third.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      { // 多docs - 面试题
         id: 'interview',
         path: '99.interview',
         routeBasePath: 'interview',
         sidebarPath: require.resolve('./sidebars/interview.js'),
       },
     ],
-    [
-      '@docusaurus/plugin-content-blog',
-      { // 多blog - 报错篇
-        id: 'someerror',
-        path: '03.someerror',
-        routeBasePath: 'someerror',
-        blogSidebarTitle: '报错篇',  // blog侧边栏总标题
-        blogSidebarCount: 'ALL', // 所有博文
-      },
-    ],
+    // [
+    //   '@docusaurus/plugin-content-blog',
+    //   { // 多blog - 报错篇
+    //     id: 'someerror',
+    //     path: '03.someerror',
+    //     routeBasePath: 'someerror',
+    //     blogSidebarTitle: '报错篇',  // blog侧边栏总标题
+    //     blogSidebarCount: 'ALL', // 所有博文
+    //   },
+    // ],
   ],
 
   // 插件 - 主题: 实时代码编辑
@@ -144,19 +153,21 @@ const config = {
             type: 'doc',
             docId: 'Javascript篇/数据类型',
             position: 'left',
-            label: '大前端',
+            label: '前端',
+          },
+          {
+            type: 'doc',
+            docsPluginId: 'third',
+            docId: 'monaco-editor/概述',
+            position: 'left',
+            label: '插件',
           },
           {
             type: 'doc',
             docsPluginId: 'tips',
             docId: 'Charles篇/界面介绍',
             position: 'left',
-            label: '技巧篇',
-          },
-          {
-            to: 'someerror',
-            position: 'left',
-            label: '报错篇',
+            label: '技巧',
           },
           {
             to: 'blog',

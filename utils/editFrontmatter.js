@@ -71,7 +71,7 @@ async function main() {
 
     if (path.includes('docs') || path.includes('tips')) {
       delete matterData.authors;
-    } else if (path.includes('blog') || path.includes('someerror')) {
+    } else if (path.includes('blog') || path.includes('third')) {
       configData.authors = ['Rabbit'];
     }
 

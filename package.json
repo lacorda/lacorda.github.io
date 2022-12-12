@@ -14,9 +14,9 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "matter:docs": "node utils/editFrontmatter.js 01.docs",
     "matter:tips": "node utils/editFrontmatter.js 02.tips",
-    "matter:someerror": "node utils/editFrontmatter.js 03.someerror",
+    "matter:third": "node utils/editFrontmatter.js 03.third",
     "matter:blog": "node utils/editFrontmatter.js 10.blog",
-    "matter": "npm run matter:docs && npm run matter:tips && npm run matter:blog && npm run matter:someerror"
+    "matter": "npm run matter:docs && npm run matter:tips && npm run matter:blog && npm run matter:third"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.1",
