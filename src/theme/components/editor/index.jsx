@@ -4,6 +4,7 @@ import { Tabs } from 'antd';
 import themeConfig from './theme'
 import { genBem } from '@site/src/pages/_utils';
 import { isObject, isArray } from '@site/src/pages/_utils/tools';
+import { MONACO_EDITOR_CONFIG } from './config'
 
 import './index.scss';
 
@@ -65,6 +66,22 @@ const Editor = (props, ref) => {
   const handleDidMount = (editor, monaco) => {
     genValues(editor);
     setEditor({ editor, monaco });
+
+    editor.addCommand(monaco.KeyCode.F5, function () {
+      alert('F9 pressed!');
+    });
+
+    // editor.addCommand(
+    //   {
+    //     ctrlCmd: true,
+    //     key: 'F9'
+    //   },
+    //   function (ctx, args) {
+    //     alert('Command Running!!');
+    //     console.log(ctx);
+    //   }
+    // );
+
     onMount && onMount({ editor, monaco })
   }
 
@@ -133,7 +150,10 @@ const Editor = (props, ref) => {
                 path={path}
                 language={language}
                 defaultValue={value}
-                options={{ readOnly }}
+                options={{
+                  ...MONACO_EDITOR_CONFIG.options,
+                  readOnly
+                }}
                 onChange={handleChange}
                 onMount={handleDidMount}
                 beforeMount={handleWillMount}
