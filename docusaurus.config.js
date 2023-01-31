@@ -244,7 +244,12 @@ const config = {
         apiKey: 'c721f4b7746401603de71e13e026793f',
         indexName: 'lacorda',
         contextualSearch: true,
-      }
+      },
+      // 右侧导航层级配置
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 5,
+      },
     }),
 };
 

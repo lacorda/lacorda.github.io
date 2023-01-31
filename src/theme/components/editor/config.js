@@ -8,7 +8,7 @@ export const MONACO_EDITOR_CONFIG = {
     },
     mouseWheelZoom: true,
     padding: {
-      top: 80
+      // top: 80
     },
     smoothScrolling: true,
     // suggestFontSize: 30

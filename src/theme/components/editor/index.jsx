@@ -67,20 +67,184 @@ const Editor = (props, ref) => {
     genValues(editor);
     setEditor({ editor, monaco });
 
-    editor.addCommand(monaco.KeyCode.F5, function () {
-      alert('F9 pressed!');
-    });
+    // editor.addAction({
+    //   // An unique identifier of the contributed action.
+    //   id: 'my-unique-id',
+
+    //   // A label of the action that will be presented to the user.
+    //   label: 'My Label!!!',
+
+    //   // An optional array of keybindings for the action.
+    //   keybindings: [  // 快捷键
+    //     monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyU,  // 组合键
+    //     // chord
+    //     monaco.KeyMod.chord(  // 分步组合键
+    //       monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyI,
+    //       monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyO
+    //     )
+    //   ],
+
+    //   // A precondition for this action.
+    //   precondition: null,  // 前提
+
+    //   // A rule to evaluate on top of the precondition in order to dispatch the keybindings.
+    //   keybindingContext: null,
+
+    //   contextMenuGroupId: 'navigation',
+
+    //   contextMenuOrder: 1.5,
+
+    //   // Method that will be executed when the action is triggered.
+    //   // @param editor The editor instance is passed in as a convenience
+    //   run: function (ed) {  // 触发时执行
+    //     alert("i'm running => " + ed.getPosition());
+    //   }
+    // });
+
+
+
+    // editor.addCommand(monaco.KeyCode.F9, function () {
+    //   alert('Tab pressed!');
+    // });
+
+
+    // var contentWidget = {
+    //   allowEditorOverflow: true,
+    //   getId: function () {
+    //     return 'my.content.widget';
+    //   },
+    //   getDomNode: function () {
+    //     if (!this.domNode) {
+    //       this.domNode = document.createElement('div');
+    //       this.domNode.innerHTML = 'Content Widget';
+    //       this.domNode.style.background = 'red';
+    //       this.domNode.style.whiteSpace = 'nowrap';
+    //       // this.domNode.style.left = '0px'; // 无效
+    //     }
+    //     return this.domNode;
+    //   },
+    //   getPosition: function () {
+    //     return {
+    //       position: {  // 必须
+    //         lineNumber: 6,
+    //         column: 3
+    //       },
+    //       preference: [
+    //         // monaco.editor.ContentWidgetPositionPreference.ABOVE,
+    //         monaco.editor.ContentWidgetPositionPreference.BELOW,
+    //         monaco.editor.ContentWidgetPositionPreference.EXACT
+    //       ]
+    //     };
+    //   }
+    // };
+    // editor.addContentWidget(contentWidget);
+
+
+    // var overlayWidget = {
+    //   domNode: null,
+    //   getId: function () {
+    //     return 'my.overlay.widget';
+    //   },
+    //   getDomNode: function () {
+    //     if (!this.domNode) {
+    //       this.domNode = document.createElement('div');
+    //       this.domNode.innerHTML = 'overlay widget';
+    //       this.domNode.style.background = 'grey';
+    //       this.domNode.style.left = '0px';
+    //       this.domNode.style.top = '10px';
+    //     }
+    //     return this.domNode;
+    //   },
+    //   getPosition: function () {
+    //     return null;
+    //   }
+    // };
+    // editor.addOverlayWidget(overlayWidget);
+
+
+
+    // const $rootEl = document.querySelector('#__docusaurus');
+    // editor.applyFontInfo($rootEl);
+
+
+
+    // var viewZoneId = null;
+    // var domNode1 = null;
+    // editor.changeViewZones(function (changeAccessor) {
+    //   domNode1 = document.createElement('div');
+    //   domNode1.id = 'viewzone-1';
+    //   domNode1.style.background = 'lightgreen';
+    //   // domNode.style.left = '20px';
+    //   // domNode.style.top = '20px';  // 无效
+    //   viewZoneId = changeAccessor.addZone({
+    //     afterColumn: 2,
+    //     afterLineNumber: 2,
+    //     heightInLines: 6,
+    //     domNode: domNode1
+    //   });
+    // });
+
+    // var viewZoneId2 = null;
+    // editor.changeViewZones(function (changeAccessor) {
+    //   var domNode = document.createElement('div');
+    //   domNode.id = 'viewzone-2';
+    //   domNode.style.background = 'red';
+    //   // domNode.style.left = '20px';
+    //   // domNode.style.top = '20px';  // 无效
+    //   viewZoneId2 = changeAccessor.addZone({
+    //     afterColumn: 2,
+    //     afterLineNumber: 2,
+    //     heightInLines: 5,
+    //     marginDomNode: domNode1,
+    //     domNode: domNode
+    //   });
+    // });
+
+
+
+
+    // var myCondition1 = editor.createContextKey(/*key name*/ 'myCondition1', /*default value*/ false);
+    // var myCondition2 = editor.createContextKey(/*key name*/ 'myCondition2', /*default value*/ false);
 
     // editor.addCommand(
-    //   {
-    //     ctrlCmd: true,
-    //     key: 'F9'
+    //   monaco.KeyCode.Tab,
+    //   function () {
+    //     // services available in `ctx`
+    //     alert('my command is executing!');
     //   },
-    //   function (ctx, args) {
-    //     alert('Command Running!!');
-    //     console.log(ctx);
-    //   }
+    //   'myCondition1 && myCondition2'
     // );
+
+    // myCondition1.set(true);
+
+    // setTimeout(function () {
+    //   alert('now enabling also myCondition2, try pressing Tab!');
+    //   myCondition2.set(true);
+    //   // you can use myCondition2.reset() to go back to the default
+    // }, 2000);
+
+
+
+    // const commandId = editor.addCommand(monaco.KeyCode.F9, function () {
+    //   alert('F9 pressed!');
+    // });
+
+
+    const action = {
+      id: 'test',
+      label: 'test',
+      precondition: 'isChrome == true',
+      keybindings: [monaco.KeyMod.CtrlCmd | monaco.KeyCode.KeyL],
+      run: () => {
+        window.alert('chrome: cmd + k');
+      },
+    };
+
+    const actionDispose = editor.addAction(action);
+
+    console.log('🍉  actionDispose', actionDispose);
+    console.log('🍉  getAction', editor.getAction(action.id));
+
 
     onMount && onMount({ editor, monaco })
   }
