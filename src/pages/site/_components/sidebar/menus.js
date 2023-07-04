@@ -4,6 +4,7 @@ import {
   ToolOutlined,
   FunctionOutlined,
   LinkOutlined,
+  SettingOutlined
 } from '@ant-design/icons';
 
 function getItem(label, key, icon, children, type) {
@@ -76,6 +77,18 @@ const menus = [
       {
         label: 'Option 16',
         key: '16',
+        icon: null,
+      },
+    ]
+  },
+  {
+    label: 'DevTools',
+    key: 'devtools',
+    icon: <SettingOutlined />,
+    children: [
+      {
+        label: 'Element面板',
+        key: 'element',
         icon: null,
       },
     ]

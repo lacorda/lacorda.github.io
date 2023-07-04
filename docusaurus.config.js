@@ -181,7 +181,7 @@ const config = {
             'aria-label': 'codepen',
           },
           {
-            to: '/site#/demo',
+            to: '/site#/tools/demo',
             position: 'left',
             className: 'header-menu iconfont icon-democrat',
             'aria-label': 'demo',

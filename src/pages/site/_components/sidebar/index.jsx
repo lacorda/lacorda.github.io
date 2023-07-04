@@ -10,17 +10,20 @@ const Sidebar = (props) => {
 
   const prefixCls = 'components-sidebar';
   const bem = (e, m) => (genBem(prefixCls, e, m));
+  const paths = history.location.pathname.split('/');
+  const len = paths.length;
+  const currentKey = paths[len - 1];
+  const openKey = paths[1];
 
   const [theme, setTheme] = useState();
-  const [current, setCurrent] = useState('demo');
 
   let observer = null;
   const items = genMenus();
 
   useEffect(() => {
     // 修改编辑器主题
-    observer = observerTheme((theme) => {
-      setTheme(theme);
+    observer = observerTheme((t) => {
+      setTheme(t);
     });
   }, [])
 
@@ -32,8 +35,8 @@ const Sidebar = (props) => {
 
 
   const onClick = (e) => {
-    setCurrent(e.key);
-    history.push(e.key);
+    const path = e.keyPath.reverse().join('/')
+    history.push(`/${path}`);
   };
 
   return (
@@ -42,8 +45,8 @@ const Sidebar = (props) => {
         theme={theme}
         onClick={onClick}
         style={{ width: 240 }}
-        defaultOpenKeys={['tools']}
-        selectedKeys={[current]}
+        defaultOpenKeys={[openKey]}
+        selectedKeys={[currentKey]}
         mode="inline"
         items={items}
       />
