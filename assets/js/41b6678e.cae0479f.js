@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[4091],{16879:o=>{o.exports=JSON.parse('{"label":"devTools","permalink":"/docs/tags/dev-tools","allTagsPath":"/docs/tags","count":1,"items":[{"id":"Chrome\u7bc7/devTools","title":"devTools","description":"devTools","permalink":"/docs/aa7645d"}]}')}}]);
