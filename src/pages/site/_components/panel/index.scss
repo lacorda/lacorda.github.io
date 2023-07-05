@@ -2,13 +2,16 @@
   border: 1px solid #f5f5f5;
   border-radius: 8px;
   box-shadow: 0 4px 10px 0 rgba(153, 153, 153, 0.1);
-
+  & + .site-comp-panel {
+    margin-top: 16px;
+  }
   &--flex .site-comp-panel__body {
     display: flex;
     flex-wrap: wrap;
 
     .site-comp-panel + .site-comp-panel {
       margin-left: 16px;
+      margin-top: 0;
     }
   }
 

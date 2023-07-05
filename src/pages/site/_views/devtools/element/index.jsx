@@ -5,6 +5,7 @@ import Panel from '../../../_components/Panel';
 import './index.scss';
 
 const Demo = (props) => {
+  let $div, $span;
   const changeDom = (e) => {
     const child = e.target.childNodes[1];
     if (child) {
@@ -54,6 +55,47 @@ const Demo = (props) => {
 
       default:
         break;
+    }
+  }
+
+  const handelCreateDiv = () => {
+    $div = document.createElement("div");
+    alert('div');
+  }
+
+  const handelGCDiv = () => {
+    $div = null;
+    alert('gc div');
+  }
+
+  const handelCreateSpan = () => {
+    $span = document.createElement("span");
+    alert('gcspan');
+  }
+
+  const handelGCSpan = () => {
+    $span = null;
+    alert('gc span');
+  }
+
+  const handelBB = () => {
+    let foo = null;
+    function outer() {
+      let bar = foo; // 闭包1
+
+      function unused() { // 未使用到的函数
+        console.log(`bar is ${bar}`); // 闭包2
+      }
+
+      foo = { // 闭包1，给foo变量重新赋值
+        bigData: new Array(100000).join("this_is_a_big_data"), // 如果这个对象携带的数据非常大，将会造成非常大的内存泄漏
+        inner: function () {
+          console.log(`inner method run`);
+        }
+      }
+    }
+    for (let i = 0; i < 1000; i++) {
+      outer();
     }
   }
 
@@ -114,7 +156,16 @@ const Demo = (props) => {
         <br />
         <Button onClick={() => { handleConsole('clear'); }}>console.clear</Button>
       </Panel>
-    </Container>
+      <Panel title="内存泄漏demo" className="memory-panel">
+        <Button onClick={() => { handelCreateDiv(); }}>点击创建div</Button>
+        <Button onClick={() => { handelCreateSpan(); }}>点击创建span</Button>
+        <br />
+        <Button onClick={() => { handelGCDiv(); }}>点击回收div</Button>
+        <Button onClick={() => { handelGCSpan(); }}>点击回收span</Button>
+        <br />
+        <Button onClick={() => { handelBB(); }}>闭包引起的内存泄漏</Button>
+      </Panel>
+    </Container >
   )
 }
 

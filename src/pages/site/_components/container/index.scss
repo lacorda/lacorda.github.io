@@ -1,10 +1,11 @@
 .site-pager {
   &__wrapper {
     display: flex;
-    height: calc(100vh - 150px);
+    // height: calc(100vh - 150px);
   }
 
   &__container {
     padding: 12px;
+    flex: 1;
   }
 }
