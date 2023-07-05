@@ -1,0 +1,21 @@
+.first-child-container {
+  .first-child-panel1 .site-comp-panel__body {
+    // first-child 属满足两个条件：1. div标签，2.其父元素的第一个子元素是div标签
+    div:first-child {
+      color: red;
+    }
+  }
+
+  .first-child-panel2 .site-comp-panel__body {
+    div:first-child {
+      color: red;
+    }
+  }
+
+  .first-of-type-panel1 .site-comp-panel__body {
+    // first-of-type 属满足两个条件: 1. 作用域内兄弟元素之间同标签的第一个元素， 2. div标签
+    div:first-of-type {
+      color: red;
+    }
+  }
+}
