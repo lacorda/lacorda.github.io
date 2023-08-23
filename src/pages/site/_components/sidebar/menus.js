@@ -56,27 +56,22 @@ const menus = [
   },
   {
     label: 'React Hooks',
-    key: 'react',
+    key: 'react-hooks',
     icon: <LinkOutlined />,
     children: [
       {
-        label: 'Option 13',
-        key: '13',
+        label: 'useEffect与useLayoutEffect',
+        key: 'useEffect',
         icon: null,
       },
       {
-        label: 'Option 14',
-        key: '14',
+        label: 'useCallback',
+        key: 'useCallback',
         icon: null,
       },
       {
-        label: 'Option 15',
-        key: '15',
-        icon: null,
-      },
-      {
-        label: 'Option 16',
-        key: '16',
+        label: 'useMemo',
+        key: 'useMemo',
         icon: null,
       },
     ]

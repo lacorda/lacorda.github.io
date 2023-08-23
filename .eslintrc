@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "plugin:@docusaurus/recommended"
+  ],
+  "rules": {
+    // "no-unused-vars": "off",
+    // "no-unused-labels": "off"
+  }
+}
