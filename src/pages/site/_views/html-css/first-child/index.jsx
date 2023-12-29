@@ -8,7 +8,7 @@ const Demo = (props) => {
   return (
     <Container {...props} className="first-child-container">
       <Panel title="first-child" className="first-child-panel1">
-        <div class="parent">
+        <div className="parent">
           <div>aa</div>
           <div>bb</div>
           <div>cc</div>
@@ -16,7 +16,7 @@ const Demo = (props) => {
         </div>
       </Panel>
       <Panel title="first-child" className="first-child-panel1">
-        <div class="parent">
+        <div className="parent">
           <p>aa</p>
           <p>bb</p>
           <p>cc</p>
@@ -25,7 +25,7 @@ const Demo = (props) => {
       </Panel>
       <Panel title="first-child" className="first-child-panel2">
         <h1>h1</h1>
-        <div class="parent">
+        <div className="parent">
           <div>aa</div>
           <div>bb</div>
           <div>cc</div>
@@ -34,7 +34,7 @@ const Demo = (props) => {
       </Panel>
       <Panel title="first-child" className="first-child-panel2">
         <h1>h1</h1>
-        <div class="parent">
+        <div className="parent">
           <p>aa</p>
           <div>bb</div>
           <div>cc</div>
@@ -43,7 +43,7 @@ const Demo = (props) => {
       </Panel>
       <Panel title="first-of-type" className="first-of-type-panel1">
         <h1>hellow world</h1>
-        <div class="parent">
+        <div className="parent">
           <div>aa</div>
           <p>bb</p>
           <p>cc</p>
@@ -53,12 +53,12 @@ const Demo = (props) => {
       </Panel>
       <Panel title="first-of-type" className="first-of-type-panel1">
         <h1>hellow world</h1>
-        <p class="parent">
-          <div>aa</div>
+        <div className="parent">
+          <span>aa</span>
           <p>bb</p>
           <p>cc</p>
           <p>dd</p>
-        </p>
+        </div>
         <div>ee</div>
       </Panel>
     </Container>
