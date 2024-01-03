@@ -151,7 +151,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'Javascript篇/数据类型',
+            docId: 'Chrome篇/devTools使用',
             position: 'left',
             label: '前端',
           },
@@ -189,7 +189,7 @@ const config = {
           {
             type: 'doc',
             docsPluginId: 'interview',
-            docId: 'Javascript篇/数据类型',
+            docId: '未整理/Javascript篇/数据类型',
             position: 'right',
             className: 'header-menu iconfont icon-book',
             'aria-label': '面试题',
