@@ -193,7 +193,7 @@ const config = {
             position: 'right',
             className: 'header-menu iconfont icon-book',
             'aria-label': '面试题',
-            label: '面试题'
+            label: ' '
           },
           {
             type: 'search',
