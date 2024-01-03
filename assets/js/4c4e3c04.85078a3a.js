@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[6590],{19293:o=>{o.exports=JSON.parse('{"label":"cookies","permalink":"/docs/tags/cookies","allTagsPath":"/docs/tags","count":1,"items":[{"id":"Chrome\u7bc7/Chrome\u63d2\u4ef6/API/cookies","title":"cookie","description":"cookies","permalink":"/docs/19a7499"}]}')}}]);
