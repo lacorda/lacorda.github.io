@@ -1,6 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { Button } from 'antd'
-import Container from '../../../_components/container';
 import NumberList from './numberList'
 
 const UseMemoDemo = (props) => {
@@ -14,14 +13,14 @@ const UseMemoDemo = (props) => {
   }, [numbers]);
 
   return (
-    <Container {...props} className="usecallback-container">
+    <div className="usecallback-container">
       <h1>Number Squares</h1>
       <NumberList numbers={squaredNumbers} />
       <Button type="primary" size="sm" onClick={() => setCount(count + 1)}>count: {count}</Button>
       <br />
       <br />
       <Button type="primary" size="sm" onClick={() => setNumbers(numbers.map(n => n + 1))}>numbers: {numbers}</Button>
-    </Container >
+    </div >
   );
 };
 

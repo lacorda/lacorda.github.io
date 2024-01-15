@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   BgColorsOutlined,
   ToolOutlined,
@@ -7,7 +8,7 @@ import {
   SettingOutlined
 } from '@ant-design/icons';
 
-function getItem(label, key, icon, children, type) {
+export const getItem = (label, key, icon, children, type) => {
   return {
     key,
     icon,
@@ -17,7 +18,7 @@ function getItem(label, key, icon, children, type) {
   };
 }
 
-const menus = [
+export const menus = [
   {
     label: '我的工具',
     key: 'tools',
@@ -38,6 +39,11 @@ const menus = [
       {
         label: 'first-child与first-of-type',
         key: 'first-child',
+        icon: null,
+      },
+      {
+        label: 'CSS 技巧：从高度 0 过渡到自动！',
+        key: 'CssTrickTransitionFromHeight0toauto',
         icon: null,
       },
     ]
@@ -90,12 +96,3 @@ const menus = [
   },
 ]
 
-export default function genMenus() {
-  return menus.map(menu => {
-    const { label, key, icon, children } = menu;
-    return getItem(label, key, icon, children.map(child => {
-      const { label: cLabel, key: cKey, icon: cIcon } = child;
-      return getItem(cLabel, cKey, cIcon);
-    }))
-  })
-};

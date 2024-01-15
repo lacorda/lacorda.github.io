@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
-import Container from '../../_components/container';
+import React, { useEffect, Component } from 'react';
 
-const Demo = (props) => {
+const Demo = () => {
   useEffect(() => {
     // 1. 使用 chrome.runtime.sendMessage 向 background 发送消息
 
@@ -21,9 +20,7 @@ const Demo = (props) => {
   }, [])
 
   return (
-    <Container {...props}>
-      <div>demo123</div>
-    </Container>
+    <div>demo123</div>
   )
 }
 

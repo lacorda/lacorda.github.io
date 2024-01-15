@@ -1,10 +1,9 @@
 import React from 'react';
 import { Button } from 'antd';
-import Container from '../../../_components/container';
 import Panel from '../../../_components/Panel';
 import './index.scss';
 
-const Demo = (props) => {
+const Demo = () => {
   let $div, $span;
   const changeDom = (e) => {
     const child = e.target.childNodes[1];
@@ -100,7 +99,7 @@ const Demo = (props) => {
   }
 
   return (
-    <Container {...props} className="element-container">
+    <div className="element-container">
       <Panel title="布局" isFlex>
         <Panel title="Grid">
           <div className="grid-panel">
@@ -165,7 +164,7 @@ const Demo = (props) => {
         <br />
         <Button onClick={() => { handelBB(); }}>闭包引起的内存泄漏</Button>
       </Panel>
-    </Container >
+    </div >
   )
 }
 

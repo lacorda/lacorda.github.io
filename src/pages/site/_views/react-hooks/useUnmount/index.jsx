@@ -13,12 +13,12 @@ const UseUnmountDemo = (props) => {
   const [state, { toggle }] = useBoolean(true);
 
   return (
-    <Container {...props}>
+    <>
       <button type="button" onClick={toggle}>
         {state ? 'unmount' : 'mount'}
       </button>
       {state && <MyComponent />}
-    </Container>
+    </>
   );
 };
 

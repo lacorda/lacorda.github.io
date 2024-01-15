@@ -1,12 +1,10 @@
 import React from 'react';
-import { Button } from 'antd';
-import Container from '../../../_components/container';
 import Panel from '../../../_components/Panel';
 import './index.scss';
 
 const Demo = (props) => {
   return (
-    <Container {...props} className="first-child-container">
+    <div className="first-child-container">
       <Panel title="first-child" className="first-child-panel1">
         <div className="parent">
           <div>aa</div>
@@ -61,7 +59,7 @@ const Demo = (props) => {
         </div>
         <div>ee</div>
       </Panel>
-    </Container>
+    </div>
   )
 }
 

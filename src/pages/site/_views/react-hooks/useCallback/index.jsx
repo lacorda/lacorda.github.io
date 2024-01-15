@@ -1,6 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import Button from './button';
-import Container from '../../../_components/container';
 
 const UseCallbackDemo = (props) => {
   const [count1, setCount1] = useState(0);
@@ -24,10 +23,10 @@ const UseCallbackDemo = (props) => {
   // };
 
   return (
-    <Container {...props} className="usecallback-container">
+    <div className="usecallback-container">
       <Button onClick={handleIncrement1} label={`Count 1: ${count1}`} />
       <Button onClick={handleIncrement2} label={`Count 2: ${count2}`} />
-    </Container>
+    </div>
   );
 };
 
