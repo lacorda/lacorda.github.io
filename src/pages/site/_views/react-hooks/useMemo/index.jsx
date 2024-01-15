@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Button } from 'antd'
 import NumberList from './numberList'
 
-const UseMemoDemo = (props) => {
+const UseMemoDemo = () => {
   const [numbers, setNumbers] = useState([1, 2, 3, 4, 5]);
   const [count, setCount] = useState(0);
 

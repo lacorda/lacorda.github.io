@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu } from 'antd';
-import genMenus from '../../_router/menus';
+import { genMenus } from './utils';
 import { genBem, observerTheme } from '@site/src/pages/_utils';
 
 import './index.scss';

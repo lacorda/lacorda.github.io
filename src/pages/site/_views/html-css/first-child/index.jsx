@@ -2,7 +2,7 @@ import React from 'react';
 import Panel from '../../../_components/Panel';
 import './index.scss';
 
-const Demo = (props) => {
+const Demo = () => {
   return (
     <div className="first-child-container">
       <Panel title="first-child" className="first-child-panel1">

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { Button } from 'antd';
 
-const UseEffectDemo = (props) => {
+const UseEffectDemo = () => {
   const [value, setValue] = useState(0)
 
   // useLayoutEffect(() => {
