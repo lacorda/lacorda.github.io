@@ -6,7 +6,7 @@ const CssTrickTransitionFromHeight0toauto = () => {
     <div className="accordion">
       <div className="accordion-title">Hover me!</div>
       <div className="accordion-body">
-        <div>
+        <div className="accordion-body__overflow">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ullam ipsam dignissimos perspiciatis consequatur itaque maxime nihil cupiditate veniam. Perferendis!</p>
         </div>
       </div>
