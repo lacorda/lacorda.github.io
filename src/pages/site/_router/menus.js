@@ -8,17 +8,7 @@ import {
   SettingOutlined
 } from '@ant-design/icons';
 
-export const getItem = (label, key, icon, children, type) => {
-  return {
-    key,
-    icon,
-    children,
-    label,
-    type,
-  };
-}
-
-export const menus = [
+export default [
   {
     label: '我的工具',
     key: 'tools',

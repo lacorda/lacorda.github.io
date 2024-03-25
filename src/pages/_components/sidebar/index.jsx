@@ -6,19 +6,18 @@ import { genBem, observerTheme } from '@site/src/pages/_utils';
 import './index.scss';
 
 const Sidebar = (props) => {
-  const { history } = props;
+  const { history, menus } = props;
 
   const prefixCls = 'components-sidebar';
   const bem = (e, m) => (genBem(prefixCls, e, m));
-  const paths = history.location.pathname.split('/');
-  const len = paths.length;
-  const currentKey = paths[len - 1];
-  const openKey = paths[1];
+  const paths = history.location.pathname.split('/').filter(i => i);
+  const currentKey = paths.join('#');
+  const openKey = paths[0];
 
   const [theme, setTheme] = useState();
 
   let observer = null;
-  const items = genMenus();
+  const items = genMenus(menus);
 
   useEffect(() => {
     // 修改编辑器主题
@@ -35,7 +34,7 @@ const Sidebar = (props) => {
 
 
   const onClick = (e) => {
-    const path = e.keyPath.reverse().join('/')
+    const path = e.key.split('#').join('/');
     history.push(`/${path}`);
   };
 

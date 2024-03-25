@@ -1,5 +1,5 @@
 import React from 'react';
-import Panel from '../../../_components/Panel';
+import Panel from '../../../../_components/panel';
 import './index.scss';
 
 const Demo = () => {

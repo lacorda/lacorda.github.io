@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
-import Panel from '../../../_components/Panel';
+import Panel from '../../../../_components/panel';
 import './index.scss';
 
 const Demo = () => {
