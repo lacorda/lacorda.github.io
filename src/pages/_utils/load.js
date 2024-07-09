@@ -3,7 +3,7 @@
  * @param {string | object}   url       链接地址
  * @param {function}     callback  回调函数
  */
-export function js(params, callback) {
+export function loadjs(params, callback) {
   if (typeof window === 'undefined') {
     return false;
   }
@@ -36,7 +36,7 @@ export function js(params, callback) {
  * 创建css
  * @param {string}   url       链接地址
  */
-export const css = (url) => {
+export const loadcss = (url) => {
   if (window) {
     const head = document.getElementsByTagName('head')[0];
     const link = document.createElement('link');
@@ -50,7 +50,33 @@ export const css = (url) => {
   }
 };
 
+// 添加本地script
+export const createLocalScript = (params, text) => {
+
+  if (typeof window === 'undefined') {
+    return false;
+  }
+
+  const script = document.createElement('script');
+  const head = document.getElementsByTagName('head')[0];
+  head.appendChild(script);
+
+  if (Object.prototype.toString.call(params) === '[object Object]') {
+    // 循环对象
+    Object.entries(params).forEach(([key, value]) => {
+      script.setAttribute(key, value);
+    });
+  } else if (typeof params === 'string') {
+    script.innerHTML = params;
+    return;
+  }
+
+  if (typeof text === 'string') {
+    script.innerHTML = text;
+  }
+}
+
 export default {
-  js,
-  css
+  loadjs,
+  loadcss
 }
