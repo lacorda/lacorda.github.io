@@ -189,7 +189,7 @@ const config = {
           {
             type: 'doc',
             docsPluginId: 'interview',
-            docId: '未整理/Javascript篇/数据类型',
+            docId: 'Javascript篇/数据类型',
             position: 'right',
             className: 'header-menu iconfont icon-book',
             'aria-label': '面试题',
