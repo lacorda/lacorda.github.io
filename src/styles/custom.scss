@@ -1,7 +1,8 @@
+@use "sass:meta";
 @import './font-awesome.min.css';
-@import './home.scss';
-@import './icon.scss';
-@import './antd.scss';
+@include meta.load-css('home.scss');
+@include meta.load-css('icon.scss');
+@include meta.load-css('antd.scss');
 
 /**
  * Any CSS included here will be global. The classic template
