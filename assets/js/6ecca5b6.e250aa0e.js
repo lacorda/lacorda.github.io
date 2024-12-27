@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[4516],{75746:e=>{e.exports=JSON.parse('{"label":"Promise","permalink":"/interview/tags/promise","allTagsPath":"/interview/tags","count":1,"items":[{"id":"\u672a\u6574\u7406/ES6+\u7bc7/Promise","title":"Promise","description":"Promise","permalink":"/interview/906f156"}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[6942],{86406:t=>{t.exports=JSON.parse('{"label":"\u6982\u8ff0","permalink":"/third/tags/\u6982\u8ff0","allTagsPath":"/third/tags","count":1,"items":[{"id":"monaco-editor/\u6982\u8ff0","title":"\u6982\u8ff0","description":"\u6982\u8ff0","permalink":"/third/43d4bd5"}]}')}}]);

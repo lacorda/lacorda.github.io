@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[2232],{12232:(a,c,e)=>{e.r(c),e.d(c,{DocSearchModal:()=>h.a1});var h=e(17702)}}]);

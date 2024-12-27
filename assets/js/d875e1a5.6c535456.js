@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[6459],{70865:t=>{t.exports=JSON.parse('{"label":"git stach","permalink":"/docs/tags/git-stach","allTagsPath":"/docs/tags","count":1,"items":[{"id":"\u672a\u6574\u7406/Git\u7bc7/git stach","title":"git stach","description":"git stach","permalink":"/docs/c784d6f"}]}')}}]);
