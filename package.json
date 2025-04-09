@@ -16,6 +16,7 @@
     "matter:tips": "node utils/editFrontmatter.js 02.tips",
     "matter:third": "node utils/editFrontmatter.js 03.third",
     "matter:fullStack": "node utils/editFrontmatter.js 04.fullStack",
+    "matter:other": "node utils/editFrontmatter.js 05.other",
     "matter:blog": "node utils/editFrontmatter.js 10.blog",
     "matter:interview": "node utils/editFrontmatter.js 99.interview",
     "matter": "npm run matter:docs && npm run matter:tips && npm run matter:blog && npm run matter:third && npm run matter:fullStack && npm run matter:interview"

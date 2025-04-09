@@ -54,11 +54,20 @@ const config = {
     ],
     [
       '@docusaurus/plugin-content-docs',
-      { // 多docs - 面试题
+      { // 多docs - 全栈
         id: 'fullStack',
         path: '04.fullStack',
         routeBasePath: 'fullStack',
         sidebarPath: require.resolve('./sidebars/fullStack.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      { // 多docs - 其他
+        id: 'other',
+        path: '05.other',
+        routeBasePath: 'other',
+        sidebarPath: require.resolve('./sidebars/other.js'),
       },
     ],
     [
@@ -113,7 +122,7 @@ const config = {
         blog: {
           path: '10.blog',
           showReadingTime: false,
-          blogSidebarTitle: 'More',  // blog侧边栏总标题
+          blogSidebarTitle: '简记',  // blog侧边栏总标题
           blogSidebarCount: 'ALL', // 所有博文
           editUrl: 'https://github.com/lacorda/lacorda.github.io/blob/master/blog/',
         },
@@ -186,9 +195,16 @@ const config = {
             label: '全栈',
           },
           {
+            type: 'doc',
+            docsPluginId: 'other',
+            docId: 'WASM/简介',
+            position: 'left',
+            label: '其它',
+          },
+          {
             to: 'blog',
             position: 'left',
-            label: 'MORE',
+            label: '简记',
           },
           {
             to: '/code',
