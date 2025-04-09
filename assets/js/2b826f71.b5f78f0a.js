@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[4457],{78984:a=>{a.exports=JSON.parse('{"label":"\u8349\u7a3f","permalink":"/fullStack/tags/\u8349\u7a3f","allTagsPath":"/fullStack/tags","count":1,"items":[{"id":"Next.js","title":"Next.js","description":"\u8349\u7a3f","permalink":"/fullStack/465964d"}]}')}}]);
