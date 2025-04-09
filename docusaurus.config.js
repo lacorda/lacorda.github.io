@@ -55,6 +55,15 @@ const config = {
     [
       '@docusaurus/plugin-content-docs',
       { // 多docs - 面试题
+        id: 'fullStack',
+        path: '04.fullStack',
+        routeBasePath: 'fullStack',
+        sidebarPath: require.resolve('./sidebars/fullStack.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      { // 多docs - 面试题
         id: 'interview',
         path: '99.interview',
         routeBasePath: 'interview',
@@ -168,6 +177,13 @@ const config = {
             docId: 'Charles篇/界面介绍',
             position: 'left',
             label: '技巧',
+          },
+          {
+            type: 'doc',
+            docsPluginId: 'fullStack',
+            docId: '搭建全栈项目',
+            position: 'left',
+            label: '全栈',
           },
           {
             to: 'blog',

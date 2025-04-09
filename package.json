@@ -15,9 +15,10 @@
     "matter:docs": "node utils/editFrontmatter.js 01.docs",
     "matter:tips": "node utils/editFrontmatter.js 02.tips",
     "matter:third": "node utils/editFrontmatter.js 03.third",
+    "matter:fullStack": "node utils/editFrontmatter.js 04.fullStack",
     "matter:blog": "node utils/editFrontmatter.js 10.blog",
     "matter:interview": "node utils/editFrontmatter.js 99.interview",
-    "matter": "npm run matter:docs && npm run matter:tips && npm run matter:blog && npm run matter:third && npm run matter:interview"
+    "matter": "npm run matter:docs && npm run matter:tips && npm run matter:blog && npm run matter:third && npm run matter:fullStack && npm run matter:interview"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.1",
@@ -50,6 +51,7 @@
     "@ant-design/icons": "4",
     "@docusaurus/eslint-plugin": "^2.4.1",
     "@docusaurus/module-type-aliases": "^2.0.1",
+    "@docusaurus/plugin-content-docs": "^2.0.1",
     "@monaco-editor/react": "^4.4.6",
     "@tsconfig/docusaurus": "^2.0.0",
     "antd": "^4.24.1",
