@@ -27,13 +27,6 @@ const config = {
   // 插件
   plugins: [
     'docusaurus-plugin-sass',
-    // [
-    //   'docusaurus-plugin-less',
-    //   {
-    //     // modifyVars: {},
-    //     javascriptEnabled: true,
-    //   }
-    // ],
     [
       '@docusaurus/plugin-content-docs',
       { // 多docs - 技巧篇
