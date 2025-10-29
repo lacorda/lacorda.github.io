@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[2329],{22329:(a,h,i)=>{i.r(h)}}]);

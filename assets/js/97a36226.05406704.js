@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[8171],{82085:i=>{i.exports=JSON.parse('{"label":"vite","permalink":"/docs/tags/vite","allTagsPath":"/docs/tags","count":1,"items":[{"id":"\u9879\u76ee\u642d\u5efa\u7bc7/vite","title":"vite","description":"vite","permalink":"/docs/7ae9e21"}]}')}}]);

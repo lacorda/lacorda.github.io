@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[9486],{9248:i=>{i.exports=JSON.parse('{"label":"Proxy","permalink":"/interview/tags/proxy","allTagsPath":"/interview/tags","count":1,"items":[{"id":"ES6+\u7bc7/Proxy","title":"Proxy","description":"Proxy","permalink":"/interview/483b842"}]}')}}]);

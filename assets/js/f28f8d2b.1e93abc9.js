@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[7553],{76284:a=>{a.exports=JSON.parse('{"label":"ES6","permalink":"/docs/tags/es-6","allTagsPath":"/docs/tags","count":1,"items":[{"id":"ES6+\u7bc7/ES6","title":"ES6","description":"ES6","permalink":"/docs/0d22e0d"}]}')}}]);

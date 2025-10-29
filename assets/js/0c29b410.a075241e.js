@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklacorda_github_io=self.webpackChunklacorda_github_io||[]).push([[8370],{5843:e=>{e.exports=JSON.parse('{"label":"other","permalink":"/docs/tags/other","allTagsPath":"/docs/tags","count":1,"items":[{"id":"Chrome\u7bc7/Chrome\u63d2\u4ef6/API/other","title":"\u5176\u5b83","description":"other","permalink":"/docs/ab61608"}]}')}}]);

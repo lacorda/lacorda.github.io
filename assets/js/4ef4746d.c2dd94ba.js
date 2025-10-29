@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[7979],{31394:a=>{a.exports=JSON.parse('{"label":"Date","permalink":"/interview/tags/date","allTagsPath":"/interview/tags","count":1,"items":[{"id":"Javascript\u7bc7/Date","title":"Date","description":"Date","permalink":"/interview/649b880"}]}')}}]);

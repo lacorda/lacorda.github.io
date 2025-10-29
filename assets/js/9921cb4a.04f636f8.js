@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[828],{7131:o=>{o.exports=JSON.parse('{"label":"mongoos API","permalink":"/fullStack/tags/mongoos-api","allTagsPath":"/fullStack/tags","count":1,"items":[{"id":"MongoDB/mongoos API","title":"Mongoose","description":"mongoos API","permalink":"/fullStack/13167e0"}]}')}}]);

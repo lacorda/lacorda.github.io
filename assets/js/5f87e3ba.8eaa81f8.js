@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[4826],{80218:o=>{o.exports=JSON.parse('{"permalink":"/blog/tags/1-rem\u7b49\u4e8e\u591a\u5c11px","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

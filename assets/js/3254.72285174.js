@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[3254],{93254:(a,h,o)=>{o.r(h),o.d(h,{DocSearchModal:()=>c.a1});var c=o(52552)}}]);

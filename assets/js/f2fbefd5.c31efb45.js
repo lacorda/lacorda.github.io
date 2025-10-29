@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[8511],{4593:o=>{o.exports=JSON.parse('{"label":"hooks\u7bc7","permalink":"/docs/tags/hooks\u7bc7","allTagsPath":"/docs/tags","count":1,"items":[{"id":"React\u7bc7/hooks\u7bc7","title":"hooks\u7bc7","description":"hooks\u7bc7","permalink":"/docs/0a22df3"}]}')}}]);

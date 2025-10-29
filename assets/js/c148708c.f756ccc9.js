@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunklacorda_github_io=globalThis.webpackChunklacorda_github_io||[]).push([[1277],{79576:l=>{l.exports=JSON.parse('{"label":"helloWorld","permalink":"/docs/tags/hello-world","allTagsPath":"/docs/tags","count":1,"items":[{"id":"helloWorld","title":"Hello World!!!","description":"helloWorld","permalink":"/docs/test"}]}')}}]);
